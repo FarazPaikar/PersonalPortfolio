@@ -1,0 +1,301 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1d1d1d;
+  color: #474747;
+}
+
+/* ----------------------------------- */
+/* Header & Navigation Styles */
+/* ----------------------------------- */
+header {
+  background-color: #000000;
+  padding: 10px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.name {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  margin-left: 20px;
+  font-weight: bold; /* Make the name bold */
+}
+
+.name:hover {
+  color: rgb(160, 159, 159);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  margin-right: 20px;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: 0.3s;
+  font-weight: bold; /* Make the navigation links bold */
+}
+
+nav a:hover {
+  color: rgb(160, 159, 159);
+}
+
+/* ----------------------------------- */
+/* Main Content Styles */
+/* ----------------------------------- */
+section {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Section Headings */
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #ff3c3c;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+p {
+  color: white;
+}
+
+#About p {
+  color: rgb(219, 216, 216);
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
+  background-color: #000;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: left;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin: auto;
+}
+#skills {
+  margin-top: 500px; /* Adjust this value as needed to create space */
+}
+
+
+
+
+/* ----------------------------------- */
+/* Experience Section Styles */
+/* ----------------------------------- */
+#experience {
+  text-align: center;
+}
+
+#experience h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 30px;
+}
+
+/* Container for experience items */
+.experience-container {
+  display: flex;
+  justify-content: center;
+  gap: 300px; /* Increased spacing between logos */
+  flex-wrap: nowrap; /* Keeps logos in a single row */
+  max-width: 1900px;
+  margin: auto;
+}
+
+/* Each experience item */
+.experience-item {
+  position: relative;
+  width: 180px; /* Fixed width for uniformity */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.experience-item:hover {
+  transform: scale(1.05);
+}
+
+/* ----------------------------------- */
+/* Logo Styles */
+/* ----------------------------------- */
+.experience-logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.experience-logo:hover {
+  transform: scale(1.1);
+}
+
+/* ----------------------------------- */
+/* Experience Details (Hidden Until Clicked) */
+/* ----------------------------------- */
+.experience-details-text {
+  display: none;
+  position: absolute;
+  top: 120%; /* Moves text further down to avoid overlap */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  z-index: 10;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Ensure only one details box is visible at a time */
+.experience-item.active .experience-details-text {
+  display: block;
+}
+
+/* Hide other details when clicking a different logo */
+.experience-item .experience-details-text:not(.active) {
+  display: none;
+}
+
+
+
+/*
+
+/* ----------------------------------- */
+/* Media Queries for Responsiveness */
+/* ----------------------------------- */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .experience-container {
+    flex-direction: column;
+  }
+
+  .experience-item {
+    width: 80%;
+    margin: 10px auto;
+  }
+}
+
+/* Styling for experience details text */
+.experience-details-text {
+  display: none;
+  background-color: #131212; /* Darker background for better contrast */
+  color: white;
+  border-radius: 50px; /* Slightly rounded corners for a smoother look */
+  padding: 80px;
+  margin-top: 1px;
+  font-size: 14px; /* Increased font size for better readability */
+  line-height: 1.6; /* Improved line spacing */
+  text-align: left;
+  box-shadow: 0px 4px 10px rgba(168, 105, 105, 0.4); /* Soft shadow for better depth */
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(10px); /* Slight shift to add smoothness on appearing */
+  position: absolute; /* Absolute positioning to avoid layout shift */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%) translateY(10px); /* Center both horizontally and vertically */
+}
+
+/* Hover effect for changing background color */
+.experience-details-text:hover {
+  background-color: rgb(22, 21, 21); /* Change background to black on hover */
+}
+
+/* Other styling */
+.company-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.duration {
+  font-size: 17px;
+}
+
+/* Styling for bullet points in experience details */
+.experience-details-text ul {
+  margin-left: 0px; /* Added extra spacing for better visual appeal */
+}
+
+.experience-details-text li {
+  margin-bottom: 12px; /* Increased spacing between list items */
+  font-size: 16px; /* Slightly larger text for better readability */
+  color: #ddd; /* Light gray for normal text */
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover effect for bullet points */
+.experience-details-text li:hover {
+  color: #a09e9e; /* Eye-catching hover color */
+  transform: translateX(3px); /* Slight move on hover for dynamic effect */
+}
+
+/* Adding a fade-in and smooth transition when the details appear */
+.experience-details-text.show {
+  display: block;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* Smooth transition back to normal position */
+}
+
+/* Hiding the experience details with fade-out effect */
+.experience-details-text.hide {
+  display: none;
+  opacity: 0;
+  transform: translateX(-50%) translateY(10px); /* Slide out effect */
+}
+
+
+
+
+/* For smaller screens (max-width 600px) */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}

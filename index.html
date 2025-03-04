@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="name">Faraz Paikar</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Work</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p class="about">Hi, I'm Faraz Paikar, an aspiring IT networking and security professional with a passion for technology, cybersecurity, and artificial intelligence. Currently pursuing my degree in Networking & IT Security at Ontario Tech University, I have hands-on experience in IT forensics, system administration, and network engineering. With a background in network infrastructure, security protocols, and cloud technologies, I enjoy tackling complex challenges, optimizing systems for efficiency, and staying up-to-date with the latest advancements in cybersecurity. My previous roles at Scotiabank and CBC have provided me with valuable real-world experience in IT operations and security.</p>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-container">
+            <!-- CBC Engineering Intern -->
+            <div class="experience-item">
+                <div class="experience-link" onclick="toggleExperience('cbc')">
+                    <img src="images/CBC.png" alt="CBC Logo" class="experience-logo cbc-logo">
+                </div>
+                <div id="cbc" class="experience-details-text">
+                    <h3 class="position-name">Engineering Intern</h3>
+                    <p class="company-name">CBC</p>
+                    <p class="duration">Duration: 2024-2025</p>
+                    <ul>
+                        <li>Worked alongside IT/network engineering team on network management tasks.</li>
+                        <li>Assisted with troubleshooting network issues and implementation of new solutions.</li>
+                        <li>Monitored system performance and optimized for improved efficiency.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Scotiabank Customer Experience Associate -->
+            <div class="experience-item">
+                <div class="experience-link" onclick="toggleExperience('scotiabank')">
+                    <img src="images/Scotiabank.webp" alt="Scotiabank Logo" class="experience-logo scotiabank-logo">
+                </div>
+                <div id="scotiabank" class="experience-details-text">
+                    <h3 class="position-name">Customer Experience Associate</h3>
+                    <p class="company-name">Scotiabank</p>
+                    <p class="duration">Duration: 2022-Present</p>
+                    <ul>
+                        <li>Handled customer inquiries and resolved service issues.</li>
+                        <li>Managed account problems, ensuring a high level of customer satisfaction.</li>
+                        <li>Worked efficiently to meet and exceed service expectations.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Dynamic Seats System Analyst Intern -->
+            <div class="experience-item">
+                <div class="experience-link" onclick="toggleExperience('dynamic-seats')">
+                    <img src="images/DynamicSeats.png" alt="Dynamic Seats" class="experience-logo dynamicseats">
+                </div>
+                <div id="dynamic-seats" class="experience-details-text">
+                    <h3 class="position-name">System Analyst Intern</h3>
+                    <p class="company-name">Dynamic Seats</p>
+                    <p class="duration">Duration: Summer 2021</p>
+                    <ul>
+                        <li>Assisted in managing and analyzing data for seat booking systems.</li>
+                        <li>Worked on troubleshooting and design improvements.</li>
+                        <li>Contributed to enhancing the user experience of the booking platform.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Landscaping Personal Business -->
+            <div class="experience-item">
+                <div class="experience-link" onclick="toggleExperience('landscaping')">
+                    <img src="images/Landscaping.png" alt="Landscaping Logo" class="experience-logo landscaping-logo">
+                </div>
+                <div id="landscaping" class="experience-details-text">
+                    <h3 class="position-name">Personal Business</h3>
+                    <p class="company-name">Landscaping</p>
+                    <p class="duration">Duration: 2015-Present</p>
+                    <ul>
+                        <li>Managed landscaping projects and customer relations.</li>
+                        <li>Developed business strategy and client acquisition tactics.</li>
+                        <li>Oversaw budgeting and quality control for landscaping services.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>List your key skills here.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Include your email, phone number, or a contact form here.</p>
+    </section>
+
+    <script>
+        // Function to toggle the visibility of the job details when clicking on the logo
+        function toggleExperience(id) {
+            const experience = document.getElementById(id);
+            if (experience.style.display === "block") {
+                experience.style.display = "none";
+            } else {
+                experience.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
