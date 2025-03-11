@@ -1,301 +1,519 @@
+/* ----------------------------------- */
 /* General Styles */
+/* ----------------------------------- */
+
+/* Targets the entire HTML document */
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling between anchor links */
+}
+
+/* Styles applied to the body element (the main content area of the page) */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #1d1d1d;
-  color: #474747;
+  font-family: Arial, sans-serif; /* Sets the font to Arial, with a fallback to sans-serif */
+  margin: 0; /* Removes any default margin around the body */
+  padding: 0; /* Removes any default padding around the body */
+  background-color: #080808; /* Sets the background color to a very dark grey */
+  color: #474747; /* Sets the text color to a medium grey */
 }
 
 /* ----------------------------------- */
 /* Header & Navigation Styles */
 /* ----------------------------------- */
+
+/* Styles for the header element (typically contains the website's navigation) */
 header {
-  background-color: #000000;
-  padding: 10px 30px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
+  background-color: #000000; /* Sets the header's background color to black */
+  padding: 10px 30px; /* Adds padding inside the header (top/bottom: 10px, left/right: 30px) */
+  position: fixed; /* Fixes the header at the top of the page */
+  width: 100%; /* Makes the header span the full width of the page */
+  top: 0; /* Aligns the header to the top of the page */
+  left: 0; /* Aligns the header to the left of the page */
+  z-index: 1000; /* Ensures the header appears above other elements */
+  display: flex; /* Uses flexbox layout for the header */
+  justify-content: space-between; /* Distributes space evenly between items */
+  align-items: center; /* Vertically centers the items within the header */
+  box-sizing: border-box; /* Includes padding and border in the total width/height of the element */
 }
 
+/* Styles for the name element (e.g., logo or personal name) in the header */
 .name {
-  font-size: 20px;
-  color: rgb(255, 255, 255);
-  margin-left: 20px;
-  font-weight: bold; /* Make the name bold */
+  cursor: pointer; /* Changes the cursor to a pointer on hover (indicating it's clickable) */
+  font-size: 20px; /* Sets the font size of the name */
+  color: rgb(255, 255, 255); /* Sets the font color to white */
+  margin-left: 20px; /* Adds space to the left of the name */
+  font-weight: bold; /* Makes the font bold */
 }
 
+/* Hover effect for the name element */
 .name:hover {
-  color: rgb(160, 159, 159);
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+  color: rgb(160, 159, 159); /* Changes the font color to a light grey on hover */
+  text-decoration: none; /* Removes any underline or other decorations on hover */
+  transition: 0.3s; /* Adds a smooth transition effect when hovering */
 }
 
+/* Styles for the navigation menu (links in the header) */
 nav {
-  display: flex;
-  justify-content: flex-end;
-  gap: 30px;
-  margin-right: 20px;
+  display: flex; /* Uses flexbox layout for the navigation */
+  justify-content: flex-end; /* Aligns the navigation links to the right */
+  gap: 30px; /* Adds space between the links */
+  margin-right: 20px; /* Adds space to the right of the navigation */
 }
 
+/* Styles for individual navigation links */
 nav a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-size: 18px;
-  padding: 10px 15px;
-  transition: 0.3s;
-  font-weight: bold; /* Make the navigation links bold */
+  color: rgb(255, 255, 255); /* Sets the text color of the links to white */
+  text-decoration: none; /* Removes underline or other decorations from the links */
+  font-size: 18px; /* Sets the font size of the links */
+  padding: 10px 15px; /* Adds padding around the links */
+  transition: 0.3s; /* Adds a smooth transition effect when hovering */
+  font-weight: bold; /* Makes the font bold */
 }
 
+/* Hover effect for navigation links */
 nav a:hover {
-  color: rgb(160, 159, 159);
+  color: rgb(160, 159, 159); /* Changes the link color to light grey when hovered */
 }
 
 /* ----------------------------------- */
 /* Main Content Styles */
 /* ----------------------------------- */
+
+/* Styles for the section element (typically a container for different sections of the page) */
 section {
-  padding: 80px 20px;
-  max-width: 800px;
-  margin: auto;
+  padding: 100px 20px; /* Adds padding inside each section (top/bottom: 100px, left/right: 20px) */
+  max-width: 1200px; /* Limits the maximum width of the section to 1200px */
+  margin: auto; /* Centers the section on the page */
 }
 
-/* Section Headings */
+/* Styles for section headings (h2 elements) */
 h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  position: relative;
+  font-family: 'Poppins', sans-serif; /* Sets the font to 'Poppins' with a fallback to sans-serif */
+  font-size: 28px; /* Sets the font size of the heading */
+  font-weight: 700; /* Sets the font weight to bold */
+  text-transform: uppercase; /* Converts the text to uppercase */
+  color: white; /* Sets the color of the text to white */
+  text-align: center; /* Centers the heading text */
+  padding: 20px 0; /* Adds padding above and below the heading */
+  position: relative; /* Allows for absolute positioning of the ::after pseudo-element */
 }
 
+/* Styles for the pseudo-element (::after) applied after the heading */
 h2::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background-color: #ff3c3c;
-  margin: 10px auto 0;
-  border-radius: 2px;
+  content: ""; /* Creates an empty content for the pseudo-element */
+  display: block; /* Makes the pseudo-element a block-level element */
+  width: 180px; /* Sets the width of the pseudo-element */
+  height: 5px; /* Sets the height of the pseudo-element */
+  background-color: #ff3c3c; /* Sets the color of the pseudo-element to red */
+  margin: 10px auto 0; /* Centers the pseudo-element and adds margin */
+  border-radius: 20px; /* Rounds the corners of the pseudo-element */
 }
 
-p {
-  color: white;
+/* ----------------------------------- */
+/* Home Section Styles */
+/* ----------------------------------- */
+
+/* Styles for the Home section */
+#Home {
+  display: flex; /* Uses flexbox layout */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  height: 100vh; /* Sets the height of the section to 100% of the viewport height */
+  padding: 20px; /* Adds padding inside the section */
 }
 
-#About p {
-  color: rgb(219, 216, 216);
-  font-family: 'Merriweather', serif;
-  font-size: 20px;
-  background-color: #000;
-  padding: 20px;
-  border-radius: 15px;
-  text-align: left;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  max-width: 800px;
-  margin: auto;
-}
-#skills {
-  margin-top: 500px; /* Adjust this value as needed to create space */
+/* Styles for the container within the Home section */
+.home-container {
+  display: flex; /* Uses flexbox layout */
+  align-items: center; /* Vertically centers the items */
+  gap: 30px; /* Adds space between the items */
+  max-width: 800px; /* Limits the width of the container */
 }
 
+/* Styles for the profile picture (image element) */
+.profile-picture {
+  width: 350px; /* Sets the width of the profile picture */
+  height: 350px; /* Sets the height of the profile picture */
+  border-radius: 50%; /* Makes the profile picture round */
+  object-fit: cover; /* Ensures the image covers the entire container without distortion */
+  box-shadow: 0px 4px 65px rgb(85, 15, 15); /* Adds a shadow around the profile picture */
+}
 
+/* Styles for the text container (description section) */
+.text-container {
+  text-align: left; /* Aligns the text to the left */
+  max-width: 400px; /* Limits the width of the text container */
+}
 
+/* Styles for the introductory text (name introduction) */
+.nameIntro {
+  font-family: 'Arial', sans-serif; /* Sets the font to Arial */
+  color: #ffffff; /* Sets the text color to white */
+  font-size: 32px; /* Sets the font size */
+  line-height: 1.0; /* Sets the line height */
+  text-align: center; /* Centers the text */
+  margin-top: 20px; /* Adds margin above the text */
+  margin-left: auto; /* Centers the text horizontally */
+  margin-right: auto; /* Centers the text horizontally */
+  border-radius: 10px; /* Rounds the corners of the text container */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow around the text container */
+}
+
+/* Styles for the first and last name text */
+.FirstLast {
+  font-family: 'Arial', sans-serif; /* Sets the font to Arial */
+  font-size: 90px; /* Sets the font size */
+  font-weight: 900; /* Sets the font weight to bold */
+  background: linear-gradient(90deg, #d40000, #ff6666, #ff3333, #ff9999); /* Applies a gradient background */
+  background-size: 200% 100%; /* Sets the size of the gradient */
+  background-position: 0% 50%; /* Sets the starting position of the gradient */
+  color: transparent; /* Makes the text transparent */
+  -webkit-background-clip: text; /* Clips the background to the text (only works in webkit browsers) */
+  background-clip: text; /* Clips the background to the text */
+  animation: waveEffect 4s infinite linear; /* Applies an animation to the text */
+}
+
+/* Keyframes for the waveEffect animation */
+@keyframes waveEffect {
+  0% {
+    background-position: 0% 50%; /* Starts the gradient at the left */
+  }
+  50% {
+    background-position: 100% 50%; /* Moves the gradient to the right */
+  }
+  100% {
+    background-position: 0% 50%; /* Resets the gradient position */
+  }
+}
+
+/* ----------------------------------- */
+/* About Section Styles */
+/* ----------------------------------- */
+
+/* Styles for paragraphs inside the About section */
+#about p {
+  color: rgb(219, 216, 216); /* Sets the text color to light grey */
+  font-family: 'Arial', serif; /* Sets the font to Arial, with a fallback to serif */
+  font-size: 20px; /* Sets the font size */
+  background-color: #000; /* Sets the background color to black */
+  padding: 50px; /* Adds padding inside the paragraph */
+  border-radius: 55px; /* Rounds the corners of the paragraph */
+  text-align: justify; /* Justifies the text */
+  box-shadow: 0px 4px 10px rgba(247, 0, 0, 0.3); /* Adds a shadow around the paragraph */
+  max-width: 800px; /* Limits the width of the paragraph */
+  margin: auto; /* Centers the paragraph on the page */
+}
 
 /* ----------------------------------- */
 /* Experience Section Styles */
 /* ----------------------------------- */
+
+/* Styles for the Experience section */
 #experience {
-  text-align: center;
+  text-align: center; /* Centers the text within the Experience section */
 }
 
+/* Styles for the Experience heading */
 #experience h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif; /* Sets the font to 'Poppins' */
+  font-size: 28px; /* Sets the font size */
+  font-weight: 700; /* Makes the font bold */
+  color: white; /* Sets the text color to white */
+  margin-bottom: 30px; /* Adds margin below the heading */
 }
 
-/* Container for experience items */
+/* Styles for the container holding the experience items */
 .experience-container {
-  display: flex;
-  justify-content: center;
-  gap: 300px; /* Increased spacing between logos */
-  flex-wrap: nowrap; /* Keeps logos in a single row */
-  max-width: 1900px;
-  margin: auto;
+  display: flex; /* Uses flexbox layout */
+  justify-content: center; /* Centers the items horizontally */
+  gap: 250px; /* Adds space between the items */
+  flex-wrap: nowrap; /* Ensures the items do not wrap */
+  max-width: 1900px; /* Limits the width of the container */
+  margin: auto; /* Centers the container */
+  margin-bottom: 600px; /* Adds bottom margin */
 }
 
-/* Each experience item */
+/* Styles for each individual experience item */
 .experience-item {
-  position: relative;
-  width: 180px; /* Fixed width for uniformity */
-  text-align: center;
+  position: relative; /* Positions the item relative to its container */
+  width: 180px; /* Sets the width of the item */
+  text-align: center; /* Centers the text within the item */
+  display: flex; /* Uses flexbox layout */
+  flex-direction: column; /* Stacks the item elements vertically */
+  align-items: center; /* Centers the items horizontally */
+  justify-content: center; /* Centers the items vertically */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering */
+  transition: transform 0.6s ease-in-out; /* Adds a smooth transform effect on hover */
+}
+
+/* Hover effect for the experience item */
+.experience-item:hover {
+  transform: scale(1.05); /* Slightly enlarges the item when hovered */
+}
+
+/* Styles for the logo/image of the experience item */
+.experience-logo {
+  width: 120px; /* Sets the width of the logo */
+  height: 120px; /* Sets the height of the logo */
+  border-radius: 50%; /* Makes the logo round */
+  background-color: #ffffff; /* Sets the background color to white */
+  box-shadow: 0 0 15px rgba(219, 0, 0, 0.7), 0 0 30px rgba(219, 0, 0, 0.5); /* Adds a red shadow effect */
+  object-fit: contain; /* Ensures the image fits within the container without distortion */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adds smooth transition for hover effects */
+}
+
+/* Hover effect for the logo */
+.experience-logo:hover {
+  transform: scale(1.1); /* Slightly enlarges the logo when hovered */
+  box-shadow: 0 0 25px rgba(219, 0, 0, 1), 0 0 50px rgba(219, 0, 0, 0.8); /* Adds a stronger shadow on hover */
+}
+/* .experience-details-text - Hides the experience details text by default */
+.experience-details-text {
+  display: none; /* Ensures the details are hidden initially */
+  position: absolute; /* Positions the text absolutely within its container */
+  top: 120%; /* Positions the text below the experience item */
+  left: 50%; /* Centers the text horizontally */
+  transform: translateX(-50%) scale(0.9); /* Centers horizontally and slightly scales down */
+  opacity: 0; /* Makes the text invisible initially */
+  background-color: #131212; /* Dark background color */
+  color: white; /* White text color */
+  border-radius: 30px; /* Rounded corners for the text box */
+  padding: 40px; /* Adds space inside the text box */
+  font-size: 17px; /* Text size */
+  text-align: left; /* Left-aligns the text */
+  box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.2); /* Adds a subtle shadow around the text box */
+  width: 250px; /* Sets the width of the text box */
+  z-index: 10; /* Ensures the text is above other elements */
+  transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth transition for opacity and transform */
+  min-height: 550px; /* Sets a minimum height for the text box */
+  line-height: 1.6; /* Increases line height for better readability */
+}
+
+/* .experience-item.active .experience-details-text - Displays the details text when the experience item is active */
+.experience-item.active .experience-details-text {
+  display: block; /* Shows the text when the item is active */
+  opacity: 1; /* Makes the text visible */
+}
+
+/* .experience-item .experience-details-text:not(.active) - Ensures the details text is hidden when the experience item is not active */
+.experience-item .experience-details-text:not(.active) {
+  display: none; /* Ensures the details text is hidden when the item is not active */
+}
+
+/* ----------------------------------- */
+/* Skills Section Styles */
+/* ----------------------------------- */
+
+/* #skills .skills-container - Container for skills, arranged in a flex layout */
+#skills .skills-container {
+  display: grid; /* Change to grid layout */
+  grid-template-columns: repeat(6, 1fr); /* Create 6 columns in a row */
+  gap: 40px; /* Space between items */
+  flex-wrap: wrap; /* Allow wrapping */
+  margin-top: 50px; /* Adds margin to the top of the container */
+}
+
+/* ----------------------------------- */
+/* Skills Section Styles */
+/* ----------------------------------- */
+
+/* #skills .skills-container - Container for skills, arranged in a grid layout */
+#skills .skills-container {
+  display: grid; /* Change to grid layout */
+  grid-template-columns: repeat(6, 1fr); /* Create 6 columns in a row */
+  gap: 40px; /* Space between items */
+  margin-top: 50px; /* Adds margin to the top of the container */
+}
+
+/* .skill - Individual skill item */
+.skill {
+  text-align: center; /* Centers the text inside each skill item */
+  font-size: 20px; /* Increases font size for better visibility */
+  color: #fff; /* White text color */
+  background-color: #030303; /* Dark background for the skill items */
+  border-radius: 8px; /* Slightly rounded corners for the skill item */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for transform and box-shadow */
+  margin-bottom: 0px; /* Adds space below each skill item */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(255, 0, 0, 0.4); /* Enhanced shadow effect */
+  animation: glowAnimation 1.5s infinite alternate; /* Glowing effect animation */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  align-items: center;
+  overflow: hidden; /* Prevents the logo from overflowing outside the container */
 }
 
-.experience-item:hover {
-  transform: scale(1.05);
+/* @keyframes glowAnimation - Defines the glowing animation effect for skill items */
+@keyframes glowAnimation {
+  0% {
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2), 0 8px 15px rgba(255, 0, 0, 0.4); /* Softer shadow with less spread */
+  }
+  100% {
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2), 0 8px 20px rgba(255, 0, 0, 0.6); /* Softer shadow with less spread */
+  }
 }
+
+
+/* .skill:hover - Hover effect for skill items */
+.skill:hover {
+  transform: translateY(-10px); /* Moves the skill item up on hover */
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3), 0 15px 35px rgba(255, 60, 60, 1); /* Slightly larger red shadow on hover */
+  cursor: default; /* Changes cursor to pointer */
+}
+
+/* .skill-logo - Styles for skill logos */
+.skill-logo {
+  padding-top: 20px;
+  width: 60px; /* Set logo width to a bigger size */
+  height: 60px; /* Set logo height to match width */
+  margin-bottom: 10px; /* Adds spacing between logo and text */
+  transition: transform 0.3s, filter 0.3s; /* Smooth transition for transform and filter */
+  object-fit: contain; /* Ensures logo is contained within the boundary of its element */
+}
+
+/* .skill:hover .skill-logo - Enlarges the skill logo on hover */
+.skill:hover .skill-logo {
+  transform: scale(1.2); /* Scales the logo more on hover */
+  filter: brightness(1.3); /* Brightens the logo on hover */
+}
+
 
 /* ----------------------------------- */
-/* Logo Styles */
-/* ----------------------------------- */
-.experience-logo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  object-fit: contain;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
-
-.experience-logo:hover {
-  transform: scale(1.1);
-}
-
-/* ----------------------------------- */
-/* Experience Details (Hidden Until Clicked) */
-/* ----------------------------------- */
-.experience-details-text {
-  display: none;
-  position: absolute;
-  top: 120%; /* Moves text further down to avoid overlap */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #222;
-  color: white;
-  border-radius: 10px;
-  padding: 15px;
-  font-size: 14px;
-  text-align: center;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  width: 250px;
-  z-index: 10;
-  transition: opacity 0.3s ease-in-out;
-}
-
-/* Ensure only one details box is visible at a time */
-.experience-item.active .experience-details-text {
-  display: block;
-}
-
-/* Hide other details when clicking a different logo */
-.experience-item .experience-details-text:not(.active) {
-  display: none;
-}
-
-
-
-/*
-
-/* ----------------------------------- */
-/* Media Queries for Responsiveness */
+/* Contact Section Styles */
 /* ----------------------------------- */
 
-/* For screens smaller than 768px */
-@media (max-width: 768px) {
+/* #contact - Contact section styling */
+#contact {
+  padding: 60px 20px; /* Add padding around the section */
+  text-align: center; /* Center the content */
+  font-family: 'Arial', sans-serif; /* Use a clean font */
+}
+
+/* Heading styling */
+#contact h2 {
+
+  color: #fffbfb; /* Dark gray color */
+  margin-bottom: 40px; /* Space below heading */
+  margin-top: 200px;
+}
+
+/* .contact-container - Container for contact items */
+.contact-container {
+  display: flex; /* Flex layout */
+  justify-content: space-evenly; /* Distribute items evenly */
+  gap: 40px; /* Increase space between items */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+/* .contact-item - Individual contact item */
+.contact-item {
+  background-color: #1a1818; /* Grey circle background */
+  border-radius: 50%; /* Circular items */
+  padding: 5px; /* Add padding inside each item */
+  width: 80px; /* Fixed width for consistency */
+  height: 80px; /* Fixed height for consistency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(233, 3, 3, 0.2); /* Red shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  margin-bottom: 20px; /* Space between items */
+}
+
+/* Hover effect for contact item */
+.contact-item:hover {
+  transform: translateY(-10px); /* Lift the item on hover */
+  box-shadow: 0 12px 30px rgba(233, 3, 3, 0.5); /* Stronger red shadow on hover */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+/* .contact-icon - Icon styling */
+.contact-icon {
+  width: 40px; /* Set width for consistency */
+  height: 40px; /* Set height for consistency */
+  filter: invert(1); /* Invert the icon color to white */
+}
+
+/* Specific styles for individual icons (optional) */
+.contact-item a {
+  display: block; /* Ensure anchor tag is a block element for center alignment */
+  text-decoration: none; /* Remove underline */
+}
+
+
+
+
+/* ----------------------------------- */
+/* Responsive Design with Media Queries */
+/* ----------------------------------- */
+
+/* @media screen and (max-width: 1200px) - Styles for screens smaller than 1200px */
+@media screen and (max-width: 1200px) {
   .experience-container {
-    flex-direction: column;
+    gap: 50px; /* Reduces the gap between experience items */
   }
-
-  .experience-item {
-    width: 80%;
-    margin: 10px auto;
+  .home-container {
+    flex-direction: column; /* Stacks the home container elements vertically */
+    gap: 20px; /* Reduces the gap between elements */
+  }
+  .profile-picture {
+    width: 300px; /* Reduces the size of the profile picture */
+    height: 300px; /* Reduces the size of the profile picture */
+  }
+  .text-container {
+    max-width: 100%; /* Ensures text container takes up full width */
   }
 }
 
-/* Styling for experience details text */
-.experience-details-text {
-  display: none;
-  background-color: #131212; /* Darker background for better contrast */
-  color: white;
-  border-radius: 50px; /* Slightly rounded corners for a smoother look */
-  padding: 80px;
-  margin-top: 1px;
-  font-size: 14px; /* Increased font size for better readability */
-  line-height: 1.6; /* Improved line spacing */
-  text-align: left;
-  box-shadow: 0px 4px 10px rgba(168, 105, 105, 0.4); /* Soft shadow for better depth */
-  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
-  transform: translateY(10px); /* Slight shift to add smoothness on appearing */
-  position: absolute; /* Absolute positioning to avoid layout shift */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%) translateY(10px); /* Center both horizontally and vertically */
+/* @media screen and (max-width: 768px) - Styles for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .name {
+    font-size: 18px; /* Reduces font size for smaller screens */
+  }
+  nav a {
+    font-size: 16px; /* Reduces font size for navigation links */
+    padding: 8px 12px; /* Adjusts padding for navigation links */
+  }
+  .home-container {
+    gap: 10px; /* Reduces the gap between home section elements */
+  }
+  .profile-picture {
+    width: 250px; /* Reduces profile picture size */
+    height: 250px; /* Reduces profile picture size */
+  }
+  #about p {
+    font-size: 18px; /* Reduces font size for the about section */
+  }
+  .experience-container {
+    gap: 30px; /* Reduces gap between experience items */
+  }
 }
 
-/* Hover effect for changing background color */
-.experience-details-text:hover {
-  background-color: rgb(22, 21, 21); /* Change background to black on hover */
-}
-
-/* Other styling */
-.company-name {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.duration {
-  font-size: 17px;
-}
-
-/* Styling for bullet points in experience details */
-.experience-details-text ul {
-  margin-left: 0px; /* Added extra spacing for better visual appeal */
-}
-
-.experience-details-text li {
-  margin-bottom: 12px; /* Increased spacing between list items */
-  font-size: 16px; /* Slightly larger text for better readability */
-  color: #ddd; /* Light gray for normal text */
-  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
-}
-
-/* Hover effect for bullet points */
-.experience-details-text li:hover {
-  color: #a09e9e; /* Eye-catching hover color */
-  transform: translateX(3px); /* Slight move on hover for dynamic effect */
-}
-
-/* Adding a fade-in and smooth transition when the details appear */
-.experience-details-text.show {
-  display: block;
-  opacity: 1;
-  transform: translateX(-50%) translateY(0); /* Smooth transition back to normal position */
-}
-
-/* Hiding the experience details with fade-out effect */
-.experience-details-text.hide {
-  display: none;
-  opacity: 0;
-  transform: translateX(-50%) translateY(10px); /* Slide out effect */
-}
-
-
-
-
-/* For smaller screens (max-width 600px) */
-@media (max-width: 600px) {
+/* @media screen and (max-width: 480px) - Styles for screens smaller than 480px */
+@media screen and (max-width: 480px) {
+  header {
+    padding: 10px; /* Reduces padding in header */
+  }
+  .name {
+    font-size: 16px; /* Further reduces font size for the name */
+  }
   nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column; /* Stacks the navigation links vertically */
+    align-items: center; /* Centers the navigation links */
+  }
+  nav a {
+    font-size: 14px; /* Reduces font size for navigation links */
+    padding: 6px 10px; /* Adjusts padding for navigation links */
+  }
+  .home-container {
+    gap: 10px; /* Reduces the gap between elements */
+    padding: 10px; /* Adds padding to the home container */
+  }
+  .profile-picture {
+    width: 200px; /* Reduces profile picture size */
+    height: 200px; /* Reduces profile picture size */
+  }
+  .FirstLast {
+    font-size: 60px; /* Reduces font size for the name in the home section */
   }
 }

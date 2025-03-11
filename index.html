@@ -1,93 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-</head>
-<body>
+<!DOCTYPE html> <!-- Defines the document type as HTML5 -->
+<html lang="en"> <!-- Sets the language of the document to English -->
 
+<head>
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on all devices by setting the viewport width -->
+    <title>My Portfolio</title> <!-- Sets the title of the webpage that appears in the browser tab -->
+    <link rel="stylesheet" href="style.css"> <!-- Links to an external CSS file for styling the page -->
+    <script src="script.js" defer></script> <!-- Links to an external JavaScript file with deferred loading to improve performance -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.js">
+
+
+</head>
+
+<body>
+    
+    <!-- Header section with navigation links -->
     <header>
-        <div class="name">Faraz Paikar</div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#experience">Work</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+        <div class="name" id="name-click">Faraz Paikar</div> <!-- Displays the name with an ID for interaction -->
+        <nav> <!-- Navigation menu for easy page navigation -->
+            <a href="#about">About</a> <!-- Link to the About section -->
+            <a href="#experience">Work</a> <!-- Link to the Experience section -->
+            <a href="#skills">Skills</a> <!-- Link to the Skills section -->
+            <a href="#contact">Contact</a> <!-- Link to the Contact section -->
         </nav>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p class="about">Hi, I'm Faraz Paikar, an aspiring IT networking and security professional with a passion for technology, cybersecurity, and artificial intelligence. Currently pursuing my degree in Networking & IT Security at Ontario Tech University, I have hands-on experience in IT forensics, system administration, and network engineering. With a background in network infrastructure, security protocols, and cloud technologies, I enjoy tackling complex challenges, optimizing systems for efficiency, and staying up-to-date with the latest advancements in cybersecurity. My previous roles at Scotiabank and CBC have provided me with valuable real-world experience in IT operations and security.</p>
+    <!-- Home section with personal introduction -->
+    <section id="Home">
+        <div class="home-container"> <!-- Container for home content -->
+            <img src="Images/ProfilePic.jpeg" alt="Faraz Paikar" class="profile-picture"> <!-- Profile image -->
+            <div class="text-container"> <!-- Container for the text intro -->
+                <h2 class="nameIntro"> <!-- Heading introducing the name -->
+                    Hi, my name is<br> <!-- Text introducing the person -->
+                    <span class="FirstLast">Faraz Paikar</span> <!-- Styled name -->
+                </h2>    
+            </div>
+        </div>
     </section>
 
+    <!-- About section with information about the individual -->
+    <section id="about">
+        <h2>About Me</h2> <!-- Heading for the About Me section -->
+        <p class="about"> <!-- Paragraph describing the individual -->
+            Hi, I'm Faraz Paikar, an aspiring IT networking and security professional with a passion for technology, cybersecurity, and artificial intelligence. Currently pursuing my degree in Networking & IT Security at Ontario Tech University, I have hands-on experience in IT forensics, system administration, and network engineering.
+            <br> <!-- Line break -->
+            With a background in network infrastructure, security protocols, and cloud technologies, I enjoy tackling complex challenges, optimizing systems for efficiency, and staying up-to-date with the latest advancements in cybersecurity. My previous roles at Scotiabank and CBC have provided me with valuable real-world experience in IT operations and security.
+        </p>
+    </section>
+
+    <!-- Work Experience section -->
     <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-container">
+        <h2>Experience</h2> <!-- Heading for the Experience section -->
+        <div class="experience-container"> <!-- Container for the work experience items -->
             <!-- CBC Engineering Intern -->
-            <div class="experience-item">
-                <div class="experience-link" onclick="toggleExperience('cbc')">
-                    <img src="images/CBC.png" alt="CBC Logo" class="experience-logo cbc-logo">
+            <div class="experience-item"> <!-- Experience item for CBC internship -->
+                <div class="experience-link" onclick="toggleExperience('cbc')"> <!-- Link that toggles the details for the CBC experience -->
+                    <img src="images/CBC.png" alt="CBC Logo" class="experience-logo cbc-logo"> <!-- CBC logo -->
                 </div>
-                <div id="cbc" class="experience-details-text">
-                    <h3 class="position-name">Engineering Intern</h3>
-                    <p class="company-name">CBC</p>
-                    <p class="duration">Duration: 2024-2025</p>
-                    <ul>
+                <div id="cbc" class="experience-details-text"> <!-- Hidden details about the CBC internship that can be toggled -->
+                    <h3 class="position-name">Engineering Intern</h3> <!-- Position title -->
+                    <p class="company-name">CBC</p> <!-- Company name -->
+                    <p class="duration">Duration: 2024-2025</p> <!-- Duration of the internship -->
+                    <ul> <!-- List of tasks and responsibilities -->
                         <li>Worked alongside IT/network engineering team on network management tasks.</li>
                         <li>Assisted with troubleshooting network issues and implementation of new solutions.</li>
                         <li>Monitored system performance and optimized for improved efficiency.</li>
                     </ul>
                 </div>
             </div>
-    
+
             <!-- Scotiabank Customer Experience Associate -->
-            <div class="experience-item">
-                <div class="experience-link" onclick="toggleExperience('scotiabank')">
-                    <img src="images/Scotiabank.webp" alt="Scotiabank Logo" class="experience-logo scotiabank-logo">
+            <div class="experience-item"> <!-- Experience item for Scotiabank -->
+                <div class="experience-link" onclick="toggleExperience('scotiabank')"> <!-- Link that toggles the details for the Scotiabank experience -->
+                    <img src="images/Scotiabank.webp" alt="Scotiabank Logo" class="experience-logo scotiabank-logo"> <!-- Scotiabank logo -->
                 </div>
-                <div id="scotiabank" class="experience-details-text">
-                    <h3 class="position-name">Customer Experience Associate</h3>
-                    <p class="company-name">Scotiabank</p>
-                    <p class="duration">Duration: 2022-Present</p>
-                    <ul>
+                <div id="scotiabank" class="experience-details-text"> <!-- Hidden details about Scotiabank experience -->
+                    <h3 class="position-name">Customer Experience Associate</h3> <!-- Position title -->
+                    <p class="company-name">Scotiabank</p> <!-- Company name -->
+                    <p class="duration">Duration: 2022-Present</p> <!-- Duration of employment -->
+                    <ul> <!-- List of tasks and responsibilities -->
                         <li>Handled customer inquiries and resolved service issues.</li>
                         <li>Managed account problems, ensuring a high level of customer satisfaction.</li>
                         <li>Worked efficiently to meet and exceed service expectations.</li>
                     </ul>
                 </div>
             </div>
-    
+
             <!-- Dynamic Seats System Analyst Intern -->
-            <div class="experience-item">
-                <div class="experience-link" onclick="toggleExperience('dynamic-seats')">
-                    <img src="images/DynamicSeats.png" alt="Dynamic Seats" class="experience-logo dynamicseats">
+            <div class="experience-item"> <!-- Experience item for Dynamic Seats -->
+                <div class="experience-link" onclick="toggleExperience('dynamic-seats')"> <!-- Link that toggles the details for Dynamic Seats experience -->
+                    <img src="images/DynamicSeats.png" alt="Dynamic Seats" class="experience-logo dynamicseats"> <!-- Dynamic Seats logo -->
                 </div>
-                <div id="dynamic-seats" class="experience-details-text">
-                    <h3 class="position-name">System Analyst Intern</h3>
-                    <p class="company-name">Dynamic Seats</p>
-                    <p class="duration">Duration: Summer 2021</p>
-                    <ul>
+                <div id="dynamic-seats" class="experience-details-text"> <!-- Hidden details about Dynamic Seats internship -->
+                    <h3 class="position-name">System Analyst Intern</h3> <!-- Position title -->
+                    <p class="company-name">Dynamic Seats</p> <!-- Company name -->
+                    <p class="duration">Duration: Summer 2021</p> <!-- Duration of the internship -->
+                    <ul> <!-- List of tasks and responsibilities -->
                         <li>Assisted in managing and analyzing data for seat booking systems.</li>
                         <li>Worked on troubleshooting and design improvements.</li>
                         <li>Contributed to enhancing the user experience of the booking platform.</li>
                     </ul>
                 </div>
             </div>
-    
+
             <!-- Landscaping Personal Business -->
-            <div class="experience-item">
-                <div class="experience-link" onclick="toggleExperience('landscaping')">
-                    <img src="images/Landscaping.png" alt="Landscaping Logo" class="experience-logo landscaping-logo">
+            <div class="experience-item"> <!-- Experience item for Landscaping -->
+                <div class="experience-link" onclick="toggleExperience('landscaping')"> <!-- Link that toggles the details for Landscaping -->
+                    <img src="images/Landscaping.png" alt="Landscaping Logo" class="experience-logo landscaping-logo"> <!-- Landscaping logo -->
                 </div>
-                <div id="landscaping" class="experience-details-text">
-                    <h3 class="position-name">Personal Business</h3>
-                    <p class="company-name">Landscaping</p>
-                    <p class="duration">Duration: 2015-Present</p>
-                    <ul>
+                <div id="landscaping" class="experience-details-text"> <!-- Hidden details about Landscaping -->
+                    <h3 class="position-name">Personal Business</h3> <!-- Position title -->
+                    <p class="company-name">Landscaping</p> <!-- Business name -->
+                    <p class="duration">Duration: 2015-Present</p> <!-- Duration of the business -->
+                    <ul> <!-- List of tasks and responsibilities -->
                         <li>Managed landscaping projects and customer relations.</li>
                         <li>Developed business strategy and client acquisition tactics.</li>
                         <li>Oversaw budgeting and quality control for landscaping services.</li>
@@ -97,27 +123,85 @@
         </div>
     </section>
 
+    <!-- Skills section with listed skills -->
     <section id="skills">
-        <h2>Skills</h2>
-        <p>List your key skills here.</p>
+        <h2>Skills</h2> <!-- Heading for the Skills section -->
+        <div class="skills-container"> <!-- Container for skills -->
+            <!-- Each skill with its logo -->
+            <div class="skill">
+                <img src="Images/HTML.webp" alt="HTML Logo" class="skill-logo"> <!-- HTML logo -->
+                <p>HTML</p> <!-- Skill name -->
+            </div>
+            <div class="skill">
+                <img src="Images/CSS.png" alt="CSS Logo" class="skill-logo"> <!-- CSS logo -->
+                <p>CSS</p> <!-- Skill name -->
+            </div>
+            <div class="skill">
+                <img src="Images/PythonImage.webp" alt="Python Logo" class="skill-logo"> <!-- Python logo -->
+                <p>Python</p> <!-- Skill name -->
+            </div>
+            <div class="skill">
+                <img src="Images/SQL.jpg" alt="SQL Logo" class="skill-logo"> <!-- SQL logo -->
+                <p>SQL</p> <!-- Skill name -->
+            </div>
+            <div class="skill">
+                <img src="Images/Linux.png" alt="Linux Logo" class="skill-logo"> <!-- Linux logo -->
+                <p>Linux</p> <!-- Skill name -->
+            </div>
+            <div class="skill">
+                <img src="Images/git.png" alt="Git Logo" class="skill-logo"> <!-- Git logo -->
+                <p>Git</p> <!-- Skill name -->
+            </div>
+            <div class="skill">
+                <img src="Images/javascript.webp" alt="JavaScript Logo" class="skill-logo"> <!-- JavaScript logo -->
+                <p>JavaScript</p> <!-- Skill name -->
+            </div>
+            <div class="skill">
+                <img src="Images/wireshark.png" alt="Wireshark Logo" class="skill-logo"> <!-- Wireshark logo -->
+                <p>Wireshark</p> <!-- Skill name -->
+            </div>
+            <div class="skill">
+                <img src="Images/packetTracer.webp" alt="Packet Tracer Logo" class="skill-logo"> <!-- Packet Tracer logo -->
+                <p>Packet Tracer</p> <!-- Skill name -->
+            </div>
+            <div class="skill">
+                <img src="Images/Anisble.webp" alt="Ansible Logo" class="skill-logo"> <!-- Ansible logo -->
+                <p>Ansible</p> <!-- Skill name -->
+            </div>
+            <div class="skill">
+                <img src="Images/Cisco.png" alt="Cisco Logo" class="skill-logo"> <!-- Cisco logo -->
+                <p>Cisco</p> <!-- Skill name -->
+            </div>
+            <div class="skill">
+                <img src="Images/Arista.png" alt="Arista Logo" class="skill-logo"> <!-- Arista logo -->
+                <p>Arista</p> <!-- Skill name -->
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Include your email, phone number, or a contact form here.</p>
-    </section>
+<!-- Contact section with social media links -->
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-container">
+        <!-- Gmail Contact Icon -->
+        <a href="mailto:farazpaikar99@gmail.com" target="_blank" class="contact-item">
+            <img src="icons/Email.svg" alt="Gmail Icon" class="contact-icon"> <!-- Gmail icon -->
+        </a>
 
-    <script>
-        // Function to toggle the visibility of the job details when clicking on the logo
-        function toggleExperience(id) {
-            const experience = document.getElementById(id);
-            if (experience.style.display === "block") {
-                experience.style.display = "none";
-            } else {
-                experience.style.display = "block";
-            }
-        }
-    </script>
+        <!-- LinkedIn Contact Icon -->
+        <a href="https://www.linkedin.com/in/farazpaikar" target="_blank" class="contact-item">
+            <img src="icons/linkedin.svg" alt="LinkedIn Icon" class="contact-icon"> <!-- LinkedIn icon -->
+        </a>
+
+        <!-- GitHub Contact Icon -->
+        <a href="https://github.com/farazpaikar" target="_blank" class="contact-item">
+            <img src="icons/Github.svg" alt="GitHub Icon" class="contact-icon"> <!-- GitHub icon -->
+        </a>
+    </div>
+</section>
+
+
 
 </body>
+
 </html>
