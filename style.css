@@ -13,8 +13,10 @@ body {
   margin: 0; /* Removes any default margin around the body */
   padding: 0; /* Removes any default padding around the body */
   background-color: #080808; /* Sets the background color to a very dark grey */
-  color: #474747; /* Sets the text color to a medium grey */
+  color: #df1313; /* Sets the text color to a medium grey */
 }
+
+
 
 /* ----------------------------------- */
 /* Header & Navigation Styles */
@@ -34,6 +36,8 @@ header {
   align-items: center; /* Vertically centers the items within the header */
   box-sizing: border-box; /* Includes padding and border in the total width/height of the element */
 }
+
+
 
 /* Styles for the name element (e.g., logo or personal name) in the header */
 .name {
@@ -55,7 +59,7 @@ header {
 nav {
   display: flex; /* Uses flexbox layout for the navigation */
   justify-content: flex-end; /* Aligns the navigation links to the right */
-  gap: 30px; /* Adds space between the links */
+  gap: 35px; /* Adds space between the links */
   margin-right: 20px; /* Adds space to the right of the navigation */
 }
 
@@ -254,7 +258,7 @@ h2::after {
 .experience-logo {
   width: 120px; /* Sets the width of the logo */
   height: 120px; /* Sets the height of the logo */
-  border-radius: 50%; /* Makes the logo round */
+  border-radius: 10%; /* Makes the logo round */
   background-color: #ffffff; /* Sets the background color to white */
   box-shadow: 0 0 15px rgba(219, 0, 0, 0.7), 0 0 30px rgba(219, 0, 0, 0.5); /* Adds a red shadow effect */
   object-fit: contain; /* Ensures the image fits within the container without distortion */
@@ -276,17 +280,17 @@ h2::after {
   transform: translateX(-50%) scale(0.9); /* Centers horizontally and slightly scales down */
   opacity: 0; /* Makes the text invisible initially */
   background-color: #131212; /* Dark background color */
-  color: white; /* White text color */
-  border-radius: 30px; /* Rounded corners for the text box */
+  color: rgb(204, 203, 203); /* White text color */
+  border-radius: 70px; /* Rounded corners for the text box */
   padding: 40px; /* Adds space inside the text box */
   font-size: 17px; /* Text size */
   text-align: left; /* Left-aligns the text */
   box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.2); /* Adds a subtle shadow around the text box */
-  width: 250px; /* Sets the width of the text box */
+  width: 280px; /* Sets the width of the text box */
   z-index: 10; /* Ensures the text is above other elements */
   transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth transition for opacity and transform */
-  min-height: 550px; /* Sets a minimum height for the text box */
-  line-height: 1.6; /* Increases line height for better readability */
+  min-height: 650px; /* Sets a minimum height for the text box */
+  line-height: 1.4; /* Increases line height for better readability */
 }
 
 /* .experience-item.active .experience-details-text - Displays the details text when the experience item is active */
@@ -299,6 +303,19 @@ h2::after {
 .experience-item .experience-details-text:not(.active) {
   display: none; /* Ensures the details text is hidden when the item is not active */
 }
+
+/* Header for position and company css styling*/
+.position-name, .company-name {
+  color: #fafafa;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Styling for just the company name*/
+.company-name {
+  padding-bottom: 20px;
+}
+
 
 /* ----------------------------------- */
 /* Skills Section Styles */

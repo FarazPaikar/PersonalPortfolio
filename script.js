@@ -35,3 +35,11 @@ document.getElementById("name-click").addEventListener("click", function () {  /
   document.getElementById("Home").scrollIntoView({ behavior: "smooth" });  // Scroll to the element with ID 'Home' smoothly
 });
 
+ // Get the button by its class or ID
+ const modeButton = document.getElementById('modeButton');
+
+ // Add a click event listener to toggle dark/light mode
+ modeButton.addEventListener('click', function() {
+   // Toggle a class or change properties to switch modes
+   document.body.classList.toggle('light-mode');
+ });
