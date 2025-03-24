@@ -204,6 +204,8 @@ h2::after {
   max-width: 800px; /* Limits the width of the paragraph */
   margin: auto; /* Centers the paragraph on the page */
 }
+
+
 /* ----------------------------------- */
 /* Experience Section Styles */
 /* ----------------------------------- */
@@ -441,125 +443,134 @@ h2::after {
 /* ----------------------------------- */
 
 @media screen and (max-width: 780px) {
-  /* Navbar Styles */
-  nav {
-    display: none;
-    flex-direction: column;
-    width: 200px;
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    background-color: #000000;
-    padding: 10px 0;
-    border-radius: 5px;
+
+/* ----------------------------------- */
+/* Navbar Styles */
+/* ----------------------------------- */
+
+nav {
+  display: none; /* Initially hides the navigation menu */
+  flex-direction: column; /* Arranges the menu items vertically */
+  width: 200px; /* Sets the width of the menu */
+  position: absolute; /* Positions the menu absolutely on the screen */
+  top: 50px; /* Positions the menu 50px from the top */
+  right: 10px; /* Positions the menu 10px from the right */
+  background-color: #000000; /* Sets the background color of the menu to black */
+  padding: 10px 0; /* Adds vertical padding (top and bottom) */
+  border-radius: 5px; /* Rounds the corners of the menu */
+}
+
+nav.active {
+  display: flex; /* Displays the menu when it is active */
+  animation: dropdown 0.3s ease-in-out; /* Applies the dropdown animation */
+}
+
+.hamburger {
+  display: flex; /* Displays the hamburger menu icon */
+  flex-direction: column; /* Arranges the hamburger icon lines vertically */
+  cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+}
+
+.hamburger span {
+  width: 30px; /* Sets the width of each hamburger icon line */
+  height: 4px; /* Sets the height of each hamburger icon line */
+  background-color: white; /* Sets the color of the hamburger lines to white */
+  border-radius: 5px; /* Rounds the corners of the hamburger lines */
+}
+
+@keyframes dropdown {
+  from {
+    opacity: 0; /* Starts the animation with no visibility */
+    transform: translateY(-10px); /* Starts the animation 10px above the final position */
   }
-
-  nav.active {
-    display: flex;
-    animation: dropdown 0.3s ease-in-out;
+  to {
+    opacity: 1; /* Ends the animation fully visible */
+    transform: translateY(0); /* Ends the animation in the final position */
   }
+}
 
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-  }
+nav a {
+  color: white; /* Sets the text color of links to white */
+  text-decoration: none; /* Removes underline from links */
+  padding: 12px; /* Adds padding around the text for spacing */
+  font-size: 16px; /* Sets the font size of the links */
+  transition: 0.3s; /* Adds a smooth transition effect */
+}
 
-  .hamburger span {
-    width: 30px;
-    height: 4px;
-    background-color: white;
-    border-radius: 5px;
-  }
+nav a:hover {
+  background-color: #862929; /* Changes background color when the link is hovered */
+  transform: scale(1.05); /* Slightly enlarges the link when hovered */
+  border-radius: 5px; /* Rounds the corners of the hovered link */
+}
 
-  @keyframes dropdown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+nav a:active {
+  background-color: #ff3c3c; /* Changes background color when the link is clicked */
+  transition: background-color 0.2s ease; /* Smooth transition effect for background color change */
+}
 
-  nav a {
-    color: white;
-    text-decoration: none;
-    padding: 12px;
-    font-size: 16px;
-    transition: 0.3s;
-  }
 
-  nav a:hover {
-    background-color: #862929;
-    transform: scale(1.05);
-    border-radius: 5px;
-  }
+ /* ----------------------------------- */
+/* Home Styles */
+/* ----------------------------------- */
+#Home {
+  display: flex; /* Uses flexbox to create a flexible layout */
+  flex-direction: column; /* Arranges child elements vertically */
+  justify-content: center; /* Vertically centers child elements */
+  align-items: center; /* Horizontally centers child elements */
+  height: 100vh; /* Sets the height to 100% of the viewport height */
+  width: 100%; /* Makes the container take up the full width of the screen */
+  text-align: center; /* Centers the text horizontally */
+}
 
-  nav a:active {
-    background-color: #ff3c3c;
-    transition: background-color 0.2s ease;
-  }
+.home-container {
+  display: flex; /* Uses flexbox to create a flexible layout */
+  flex-direction: column; /* Arranges child elements vertically */
+  align-items: center; /* Horizontally centers child elements */
+  width: 100%; /* Makes the container take up the full width of the parent */
+  text-align: center; /* Centers the text horizontally */
+}
 
-  /* Home Section */
-  #Home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-  }
+.profile-picture {
+  width: 150px; /* Sets the width of the profile picture */
+  height: 150px; /* Sets the height of the profile picture */
+  border-radius: 50%; /* Makes the profile picture circular */
+  margin: 0 auto; /* Centers the profile picture horizontally */
+  display: block; /* Makes the profile picture a block element to center it */
+}
 
-  .home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    width: 100%;
-    text-align: center;
-  }
+.text-container {
+  text-align: center; /* Centers the text inside the container */
+  width: 100%; /* Takes up the full width of the parent container */
+  max-width: 90%; /* Limits the maximum width to 90% of the parent */
+  margin: 0 auto; /* Centers the text container horizontally */
+}
 
-  .profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-  }
+.FirstLast {
+  font-size: 50px; /* Sets the font size for the name */
+  text-align: center; /* Centers the name text */
+  display: block; /* Makes the name a block element to take up full width */
+  width: 100%; /* Ensures the name takes up the full width of the container */
+}
 
-  .text-container {
-    text-align: center;
-    width: 100%;
-    max-width: 90%;
-    margin: 0 auto;
-  }
+h2 {
+  font-size: 20px; /* Sets the font size for the heading */
+  padding: 10px 0; /* Adds vertical padding to the heading */
+  text-align: center; /* Centers the heading text */
+  width: 100%; /* Ensures the heading takes up the full width of the container */
+}
 
-  .FirstLast {
-    font-size: 50px;
-    text-align: center;
-    display: block;
-    width: 100%;
-  }
-
-  h2 {
-    font-size: 20px;
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
-  }
-
-  h2::after {
-    width: 100px;
-    height: 3px;
-    margin: 10px auto;
-  }
+h2::after {
+  width: 100px; /* Sets the width of the pseudo-element */
+  height: 3px; /* Sets the height of the line */
+  margin: 10px auto; /* Centers the line horizontally and adds top and bottom margin */
+}
 
 
 
-  /* Ensure the experience items are arranged vertically and spaced out */
+
+/* ----------------------------------- */
+/* Experience Styles*/
+/* ----------------------------------- */
   .experience-container {
     flex-direction: column; /* Stack the items vertically */
     gap: 15px; /* Reduce gap slightly */
@@ -630,67 +641,71 @@ h2::after {
     padding-bottom: 3px; /* Reduce bottom padding for mobile */
   }
 
-  /* Optionally, you can adjust the logo shadow to look better on small screens */
   .experience-logo:hover {
     box-shadow: 0 0 12px rgba(219, 0, 0, 0.8), 0 0 20px rgba(219, 0, 0, 0.6); /* Slightly reduce hover shadow */
   }
 
 
 
-  /* Skills Section */
-  #skills {
-    padding-top: 5%;
-  }
+ /* ----------------------------------- */
+/* Skills Styles */
+/* ----------------------------------- */
+#skills {
+  padding-top: 5%; /* Adds top padding to the skills section to create space above */
+}
 
-  .skills-container {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-    padding: 0 10px;
-  }
+.skills-container {
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Creates a responsive grid with minimum column width of 80px, auto-adjusting the number of columns */
+  gap: 15px; /* Adds space between grid items */
+  margin-top: 20px; /* Adds space above the container */
+  padding: 0 10px; /* Adds left and right padding inside the container */
+}
 
-  .skill {
-    font-size: 14px;
-    padding: 8px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(255, 0, 0, 0.3);
-  }
+.skill {
+  font-size: 14px; /* Sets the font size for each skill item */
+  padding: 8px; /* Adds padding inside each skill item */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(255, 0, 0, 0.3); /* Adds a shadow effect with a slight blur around each skill item */
+}
 
-  .skill-logo {
-    width: 40px;
-    height: 40px;
-    padding-top: 8px;
-    margin-bottom: 4px;
-  }
+.skill-logo {
+  width: 40px; /* Sets the width of the logo/icon inside each skill item */
+  height: 40px; /* Sets the height of the logo/icon inside each skill item */
+  padding-top: 8px; /* Adds top padding to create space between the logo and the top of the skill item */
+  margin-bottom: 4px; /* Adds space below the logo/icon */
+}
 
 
-  /* Contact Section */
-  #contact {
-    padding: 30px 10px;
-  }
 
-  #contact h2 {
-    margin-top: 80px;
-    font-size: 20px;
-  }
+/* ----------------------------------- */
+/* Contact Section */
+/* ----------------------------------- */
+#contact {
+  padding: 30px 10px; /* Adds padding to the top, bottom, and sides of the contact section */
+}
 
-  .contact-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-  }
+#contact h2 {
+  margin-top: 80px; /* Adds space above the heading */
+  font-size: 20px; /* Sets the font size for the heading */
+}
 
-  .contact-item {
-    width: 50px;
-    height: 50px;
-    padding: 4px;
-    margin-bottom: 12px;
-  }
+.contact-container {
+  flex-direction: row; /* Arranges items in a horizontal row */
+  flex-wrap: wrap; /* Allows items to wrap to the next line if there isn't enough space */
+  justify-content: center; /* Centers the items horizontally within the container */
+}
 
-  .contact-icon {
-    width: 25px;
-    height: 25px;
-  }
+.contact-item {
+  width: 50px; /* Sets the width of each contact item */
+  height: 50px; /* Sets the height of each contact item */
+  padding: 4px; /* Adds padding inside each contact item */
+  margin-bottom: 12px; /* Adds space below each contact item */
+}
+
+.contact-icon {
+  width: 25px; /* Sets the width of the contact icon */
+  height: 25px; /* Sets the height of the contact icon */
+}
+
 }
 
 

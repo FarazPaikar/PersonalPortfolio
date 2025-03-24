@@ -1,4 +1,6 @@
+// -----------------------------
 // Function to toggle the visibility of experience details with fade effect (desktop only)
+// -----------------------------
 function toggleExperience(experienceId) {
   const experienceDetails = document.getElementById(experienceId);  // Get the experience details element by its ID
 
@@ -16,7 +18,9 @@ function toggleExperience(experienceId) {
   }
 }
 
+// -----------------------------
 // Add event listener to all experience items for toggling details (desktop only)
+// -----------------------------
 if (window.innerWidth > 480) {  // Check if the screen width is above 480px (desktop)
   document.querySelectorAll('.experience-item').forEach(item => {  // Select all elements with class 'experience-item'
     item.addEventListener('click', function() {  // Add click event listener to each item
@@ -32,24 +36,32 @@ if (window.innerWidth > 480) {  // Check if the screen width is above 480px (des
   });
 }
 
+// -----------------------------
 // Scroll to Home section when name is clicked
+// -----------------------------
 document.getElementById("name-click").addEventListener("click", function () {  // Add click event listener to the element with ID 'name-click'
   document.getElementById("Home").scrollIntoView({ behavior: "smooth" });  // Scroll to the element with ID 'Home' smoothly
 });
 
+// -----------------------------
 // Get the hamburger button and navbar
+// -----------------------------
 const hamburger = document.getElementById("hamburger");
 const navbar = document.getElementById("navbar");
 
+// -----------------------------
 // Toggle the active class on the hamburger button and navbar when clicked
+// -----------------------------
 hamburger.addEventListener("click", function() {
   // Toggle the 'active' class on the hamburger button and navbar
   hamburger.classList.toggle("active");
   navbar.classList.toggle("active");
 });
 
+// -----------------------------
 // For mobile (below 480px), we don't need any JS for toggling experience details
 // Ensure all experience descriptions are visible without interaction
+// -----------------------------
 if (window.innerWidth <= 480) {
   document.querySelectorAll('.experience-details').forEach(detail => {
     detail.style.display = 'block';  // Always show the description on mobile
