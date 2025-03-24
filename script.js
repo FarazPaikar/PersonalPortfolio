@@ -67,3 +67,8 @@ if (window.innerWidth <= 480) {
     detail.style.display = 'block';  // Always show the description on mobile
   });
 }
+
+// Trigger a resize event on window load to force the recalculation of the layout
+window.addEventListener('load', function () {
+  window.dispatchEvent(new Event('resize'));
+});
