@@ -16,78 +16,75 @@ body {
   color: #df1313; /* Sets the text color to a medium grey */
 }
 
-
-
 /* ----------------------------------- */
 /* Header & Navigation Styles */
 /* ----------------------------------- */
 
-/* Styles for the header element (typically contains the website's navigation) */
 header {
-  background-color: #000000; /* Sets the header's background color to black */
-  padding: 10px 30px; /* Adds padding inside the header (top/bottom: 10px, left/right: 30px) */
-  position: fixed; /* Fixes the header at the top of the page */
-  width: 100%; /* Makes the header span the full width of the page */
-  top: 0; /* Aligns the header to the top of the page */
-  left: 0; /* Aligns the header to the left of the page */
-  z-index: 1000; /* Ensures the header appears above other elements */
-  display: flex; /* Uses flexbox layout for the header */
-  justify-content: space-between; /* Distributes space evenly between items */
-  align-items: center; /* Vertically centers the items within the header */
-  box-sizing: border-box; /* Includes padding and border in the total width/height of the element */
+  background-color: #000000;
+  padding: 10px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-
-
-/* Styles for the name element (e.g., logo or personal name) in the header */
 .name {
-  cursor: pointer; /* Changes the cursor to a pointer on hover (indicating it's clickable) */
-  font-size: 20px; /* Sets the font size of the name */
-  color: rgb(255, 255, 255); /* Sets the font color to white */
-  margin-left: 20px; /* Adds space to the left of the name */
-  font-weight: bold; /* Makes the font bold */
+  cursor: pointer;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
 }
 
-/* Hover effect for the name element */
-.name:hover {
-  color: rgb(160, 159, 159); /* Changes the font color to a light grey on hover */
-  text-decoration: none; /* Removes any underline or other decorations on hover */
-  transition: 0.3s; /* Adds a smooth transition effect when hovering */
-}
-
-/* Styles for the navigation menu (links in the header) */
 nav {
-  display: flex; /* Uses flexbox layout for the navigation */
-  justify-content: flex-end; /* Aligns the navigation links to the right */
-  gap: 35px; /* Adds space between the links */
-  margin-right: 20px; /* Adds space to the right of the navigation */
+  display: flex;
+  justify-content: flex-end;
+  gap: 20%;
+  margin-right: 20px;
 }
 
-/* Styles for individual navigation links */
 nav a {
-  color: rgb(255, 255, 255); /* Sets the text color of the links to white */
-  text-decoration: none; /* Removes underline or other decorations from the links */
-  font-size: 18px; /* Sets the font size of the links */
-  padding: 10px 15px; /* Adds padding around the links */
-  transition: 0.3s; /* Adds a smooth transition effect when hovering */
-  font-weight: bold; /* Makes the font bold */
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: 0.3s;
+  font-weight: bold;
 }
 
-/* Hover effect for navigation links */
 nav a:hover {
-  color: rgb(160, 159, 159); /* Changes the link color to light grey when hovered */
+  color: rgb(160, 159, 159);
 }
+
+/* Styles for the hamburger button */
+.hamburger {
+  display: none; /* Initially hide it */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  margin-right: 20px;  /* Adjusted to prevent overlap with navbar */
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+
 
 /* ----------------------------------- */
 /* Main Content Styles */
 /* ----------------------------------- */
 
-/* Styles for the section element (typically a container for different sections of the page) */
-section {
-  padding: 100px 20px; /* Adds padding inside each section (top/bottom: 100px, left/right: 20px) */
-  max-width: 1200px; /* Limits the maximum width of the section to 1200px */
-  margin: auto; /* Centers the section on the page */
-}
 
 /* Styles for section headings (h2 elements) */
 h2 {
@@ -207,114 +204,98 @@ h2::after {
   max-width: 800px; /* Limits the width of the paragraph */
   margin: auto; /* Centers the paragraph on the page */
 }
-
 /* ----------------------------------- */
 /* Experience Section Styles */
 /* ----------------------------------- */
 
 /* Styles for the Experience section */
 #experience {
-  text-align: center; /* Centers the text within the Experience section */
+  text-align: center;
 }
 
 /* Styles for the Experience heading */
 #experience h2 {
-  font-family: 'Poppins', sans-serif; /* Sets the font to 'Poppins' */
-  font-size: 28px; /* Sets the font size */
-  font-weight: 700; /* Makes the font bold */
-  color: white; /* Sets the text color to white */
-  margin-bottom: 30px; /* Adds margin below the heading */
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 30px;
+  padding-top: 10%;
 }
 
 /* Styles for the container holding the experience items */
 .experience-container {
-  display: flex; /* Uses flexbox layout */
-  justify-content: center; /* Centers the items horizontally */
-  gap: 250px; /* Adds space between the items */
-  flex-wrap: nowrap; /* Ensures the items do not wrap */
-  max-width: 1900px; /* Limits the width of the container */
-  margin: auto; /* Centers the container */
-  margin-bottom: 600px; /* Adds bottom margin */
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  flex-wrap: nowrap;
+  max-width: 1900px;
+  margin: auto;
+  margin-bottom: 600px;
 }
 
 /* Styles for each individual experience item */
 .experience-item {
-  position: relative; /* Positions the item relative to its container */
-  width: 180px; /* Sets the width of the item */
-  text-align: center; /* Centers the text within the item */
-  display: flex; /* Uses flexbox layout */
-  flex-direction: column; /* Stacks the item elements vertically */
-  align-items: center; /* Centers the items horizontally */
-  justify-content: center; /* Centers the items vertically */
-  cursor: pointer; /* Changes the cursor to a pointer when hovering */
-  transition: transform 0.6s ease-in-out; /* Adds a smooth transform effect on hover */
+  position: relative;
+  width: 180px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.6s ease-in-out;
 }
 
 /* Hover effect for the experience item */
 .experience-item:hover {
-  transform: scale(1.05); /* Slightly enlarges the item when hovered */
+  transform: scale(1.05);
 }
 
 /* Styles for the logo/image of the experience item */
 .experience-logo {
-  width: 120px; /* Sets the width of the logo */
-  height: 120px; /* Sets the height of the logo */
-  border-radius: 10%; /* Makes the logo round */
-  background-color: #ffffff; /* Sets the background color to white */
-  box-shadow: 0 0 15px rgba(219, 0, 0, 0.7), 0 0 30px rgba(219, 0, 0, 0.5); /* Adds a red shadow effect */
-  object-fit: contain; /* Ensures the image fits within the container without distortion */
-  cursor: pointer; /* Changes the cursor to a pointer when hovering */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adds smooth transition for hover effects */
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(219, 0, 0, 0.7), 0 0 30px rgba(219, 0, 0, 0.5);
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* Hover effect for the logo */
 .experience-logo:hover {
-  transform: scale(1.1); /* Slightly enlarges the logo when hovered */
-  box-shadow: 0 0 25px rgba(219, 0, 0, 1), 0 0 50px rgba(219, 0, 0, 0.8); /* Adds a stronger shadow on hover */
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(219, 0, 0, 1), 0 0 50px rgba(219, 0, 0, 0.8);
 }
+
 /* .experience-details-text - Hides the experience details text by default */
 .experience-details-text {
-  display: none; /* Ensures the details are hidden initially */
-  position: absolute; /* Positions the text absolutely within its container */
-  top: 120%; /* Positions the text below the experience item */
-  left: 50%; /* Centers the text horizontally */
-  transform: translateX(-50%) scale(0.9); /* Centers horizontally and slightly scales down */
-  opacity: 0; /* Makes the text invisible initially */
-  background-color: #131212; /* Dark background color */
-  color: rgb(204, 203, 203); /* White text color */
-  border-radius: 70px; /* Rounded corners for the text box */
-  padding: 40px; /* Adds space inside the text box */
-  font-size: 17px; /* Text size */
-  text-align: left; /* Left-aligns the text */
-  box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.2); /* Adds a subtle shadow around the text box */
-  width: 280px; /* Sets the width of the text box */
-  z-index: 10; /* Ensures the text is above other elements */
-  transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth transition for opacity and transform */
-  min-height: 650px; /* Sets a minimum height for the text box */
-  line-height: 1.4; /* Increases line height for better readability */
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  opacity: 0;
+  background-color: #131212;
+  color: rgb(204, 203, 203);
+  border-radius: 70px;
+  padding: 40px;
+  font-size: 17px;
+  text-align: left;
+  box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.2);
+  width: 280px;
+  z-index: 10;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  min-height: 650px;
+  line-height: 1.4;
 }
 
 /* .experience-item.active .experience-details-text - Displays the details text when the experience item is active */
 .experience-item.active .experience-details-text {
-  display: block; /* Shows the text when the item is active */
-  opacity: 1; /* Makes the text visible */
-}
-
-/* .experience-item .experience-details-text:not(.active) - Ensures the details text is hidden when the experience item is not active */
-.experience-item .experience-details-text:not(.active) {
-  display: none; /* Ensures the details text is hidden when the item is not active */
-}
-
-/* Header for position and company css styling*/
-.position-name, .company-name {
-  color: #fafafa;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-/* Styling for just the company name*/
-.company-name {
-  padding-bottom: 20px;
+  display: block;
+  opacity: 1;
 }
 
 
@@ -323,24 +304,18 @@ h2::after {
 /* ----------------------------------- */
 
 /* #skills .skills-container - Container for skills, arranged in a flex layout */
-#skills .skills-container {
+#skills {
+  padding-top: 10%;
+}
+
+.skills-container {
   display: grid; /* Change to grid layout */
   grid-template-columns: repeat(6, 1fr); /* Create 6 columns in a row */
   gap: 40px; /* Space between items */
   flex-wrap: wrap; /* Allow wrapping */
   margin-top: 50px; /* Adds margin to the top of the container */
-}
-
-/* ----------------------------------- */
-/* Skills Section Styles */
-/* ----------------------------------- */
-
-/* #skills .skills-container - Container for skills, arranged in a grid layout */
-#skills .skills-container {
-  display: grid; /* Change to grid layout */
-  grid-template-columns: repeat(6, 1fr); /* Create 6 columns in a row */
-  gap: 40px; /* Space between items */
-  margin-top: 50px; /* Adds margin to the top of the container */
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* .skill - Individual skill item */
@@ -421,6 +396,8 @@ h2::after {
   justify-content: space-evenly; /* Distribute items evenly */
   gap: 40px; /* Increase space between items */
   flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* .contact-item - Individual contact item */
@@ -459,79 +436,284 @@ h2::after {
 }
 
 
-
-
 /* ----------------------------------- */
-/* Responsive Design with Media Queries */
+/* Responsive Design for Mobile (≤ 480px) */
 /* ----------------------------------- */
 
-/* @media screen and (max-width: 1200px) - Styles for screens smaller than 1200px */
-@media screen and (max-width: 1200px) {
-  .experience-container {
-    gap: 50px; /* Reduces the gap between experience items */
-  }
-  .home-container {
-    flex-direction: column; /* Stacks the home container elements vertically */
-    gap: 20px; /* Reduces the gap between elements */
-  }
-  .profile-picture {
-    width: 300px; /* Reduces the size of the profile picture */
-    height: 300px; /* Reduces the size of the profile picture */
-  }
-  .text-container {
-    max-width: 100%; /* Ensures text container takes up full width */
-  }
-}
-
-/* @media screen and (max-width: 768px) - Styles for screens smaller than 768px */
-@media screen and (max-width: 768px) {
-  .name {
-    font-size: 18px; /* Reduces font size for smaller screens */
-  }
-  nav a {
-    font-size: 16px; /* Reduces font size for navigation links */
-    padding: 8px 12px; /* Adjusts padding for navigation links */
-  }
-  .home-container {
-    gap: 10px; /* Reduces the gap between home section elements */
-  }
-  .profile-picture {
-    width: 250px; /* Reduces profile picture size */
-    height: 250px; /* Reduces profile picture size */
-  }
-  #about p {
-    font-size: 18px; /* Reduces font size for the about section */
-  }
-  .experience-container {
-    gap: 30px; /* Reduces gap between experience items */
-  }
-}
-
-/* @media screen and (max-width: 480px) - Styles for screens smaller than 480px */
-@media screen and (max-width: 480px) {
-  header {
-    padding: 10px; /* Reduces padding in header */
-  }
-  .name {
-    font-size: 16px; /* Further reduces font size for the name */
-  }
+@media screen and (max-width: 780px) {
+  /* Navbar Styles */
   nav {
-    flex-direction: column; /* Stacks the navigation links vertically */
-    align-items: center; /* Centers the navigation links */
+    display: none;
+    flex-direction: column;
+    width: 200px;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: #000000;
+    padding: 10px 0;
+    border-radius: 5px;
   }
+
+  nav.active {
+    display: flex;
+    animation: dropdown 0.3s ease-in-out;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  @keyframes dropdown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   nav a {
-    font-size: 14px; /* Reduces font size for navigation links */
-    padding: 6px 10px; /* Adjusts padding for navigation links */
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    font-size: 16px;
+    transition: 0.3s;
   }
+
+  nav a:hover {
+    background-color: #862929;
+    transform: scale(1.05);
+    border-radius: 5px;
+  }
+
+  nav a:active {
+    background-color: #ff3c3c;
+    transition: background-color 0.2s ease;
+  }
+
+  /* Home Section */
+  #Home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+  }
+
   .home-container {
-    gap: 10px; /* Reduces the gap between elements */
-    padding: 10px; /* Adds padding to the home container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 100%;
+    text-align: center;
   }
+
   .profile-picture {
-    width: 200px; /* Reduces profile picture size */
-    height: 200px; /* Reduces profile picture size */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
   }
+
+  .text-container {
+    text-align: center;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
   .FirstLast {
-    font-size: 60px; /* Reduces font size for the name in the home section */
+    font-size: 50px;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 20px;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  h2::after {
+    width: 100px;
+    height: 3px;
+    margin: 10px auto;
+  }
+
+
+
+  /* Ensure the experience items are arranged vertically and spaced out */
+  .experience-container {
+    flex-direction: column; /* Stack the items vertically */
+    gap: 15px; /* Reduce gap slightly */
+    margin-bottom: 180px;
+  }
+
+  .experience-item {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack logo and details vertically */
+    align-items: center; /* Center items horizontally */
+    width: 65%; /* Slightly reduce width of items */
+    text-align: center; /* Ensure the text is centered */
+    cursor: default; /* Remove the cursor pointer on mobile */
+    position: relative;
+    background-color: #131212; /* Add background color to item */
+    border-radius: 8px; /* Slightly reduce border radius */
+    box-shadow: 0px 3px 8px rgba(255, 0, 0, 0.1); /* Slightly reduce shadow */
+    margin: 0 auto; /* center the box */
+    padding:10px;
+  }
+
+  .experience-logo {
+    width: 70px; /* Further reduce logo size */
+    height: 70px; /* Adjust height to match the new width */
+    border-radius: 8%; /* Slightly reduce logo border radius */
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(219, 0, 0, 0.6), 0 0 16px rgba(219, 0, 0, 0.4); /* Slightly reduce logo shadow */
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-bottom: 1px; /* Reduce margin below logo */
+  }
+
+  .experience-item:hover {
+    transform: none; /* Remove hover effect on mobile */
+  }
+
+  /* Adjust the details text to fit the screen better */
+  .experience-details-text {
+    display: block; /* Ensure it's always displayed */
+    opacity: 1; /* Ensure it's fully visible */
+    position: relative;
+    top: 5px; /* Slightly reduce position adjustment */
+    left: 0;
+    transform: translateX(0) scale(1);
+    background-color: transparent; /* Remove redundant background */
+    color: rgb(204, 203, 203);
+    border-radius: 38px; /* Rounded corners */
+    padding: 0; /* Remove padding as it is already on the parent */
+    font-size: 13px; /* Further reduce font size */
+    text-align: left;
+    box-shadow: none; /* remove redundant shadow */
+    width: 100%; /* Make it fit the screen width better */
+    max-width: 100%; /* Ensure it takes full width */
+    z-index: 10;
+    min-height: auto; /* Adjust minimum height */
+    line-height: 1.2; /* Tighter line height for better readability */
+    margin: 5px 0 0 0; /* Reduce top margin */
+  }
+
+  .position-name, .company-name {
+    color: #fafafa;
+    font-size: 15px; /* Further reduce font size */
+    font-weight: bold;
+    margin-bottom: 3px; /* Reduce spacing */
+  }
+
+  .company-name {
+    padding-bottom: 3px; /* Reduce bottom padding for mobile */
+  }
+
+  /* Optionally, you can adjust the logo shadow to look better on small screens */
+  .experience-logo:hover {
+    box-shadow: 0 0 12px rgba(219, 0, 0, 0.8), 0 0 20px rgba(219, 0, 0, 0.6); /* Slightly reduce hover shadow */
+  }
+
+
+
+  /* Skills Section */
+  #skills {
+    padding-top: 5%;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+
+  .skill {
+    font-size: 14px;
+    padding: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(255, 0, 0, 0.3);
+  }
+
+  .skill-logo {
+    width: 40px;
+    height: 40px;
+    padding-top: 8px;
+    margin-bottom: 4px;
+  }
+
+
+  /* Contact Section */
+  #contact {
+    padding: 30px 10px;
+  }
+
+  #contact h2 {
+    margin-top: 80px;
+    font-size: 20px;
+  }
+
+  .contact-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+
+  .contact-item {
+    width: 50px;
+    height: 50px;
+    padding: 4px;
+    margin-bottom: 12px;
+  }
+
+  .contact-icon {
+    width: 25px;
+    height: 25px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
