@@ -565,8 +565,19 @@ h2::after {
   margin: 10px auto; /* Centers the line horizontally and adds top and bottom margin */
 }
 
-
-
+/* Styles for paragraphs inside the About section */
+#about p {
+  color: rgb(219, 216, 216); /* Sets the text color to light grey */
+  font-family: 'Arial', serif; /* Sets the font to Arial, with a fallback to serif */
+  font-size: 20px; /* Sets the font size */
+  background-color: #000; /* Sets the background color to black */
+  padding: 50px; /* Adds padding inside the paragraph */
+  border-radius: 55px; /* Rounds the corners of the paragraph */
+  text-align: center; /* Justifies the text */
+  box-shadow: 0px 4px 10px rgba(247, 0, 0, 0.3); /* Adds a shadow around the paragraph */
+  max-width: 800px; /* Limits the width of the paragraph */
+  margin: auto; /* Centers the paragraph on the page */
+}
 
 /* ----------------------------------- */
 /* Experience Styles*/
