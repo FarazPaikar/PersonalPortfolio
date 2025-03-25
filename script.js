@@ -50,7 +50,8 @@ const navbar = document.getElementById("navbar");
 // -----------------------------
 // Toggle the active class on the hamburger button and navbar when clicked
 // -----------------------------
-hamburger.addEventListener("click", function() {
+hamburger.addEventListener("click", function(event) {
+  event.stopPropagation(); // Prevent click event from propagating to document
   hamburger.classList.toggle("active");
   navbar.classList.toggle("active");
 });
@@ -59,10 +60,18 @@ hamburger.addEventListener("click", function() {
 // Close navbar when clicking outside of it
 // -----------------------------
 document.addEventListener("click", function(event) {
+  // Close the menu if clicked outside both the hamburger and navbar
   if (!navbar.contains(event.target) && !hamburger.contains(event.target)) {
     navbar.classList.remove("active");
     hamburger.classList.remove("active");
   }
+});
+
+// -----------------------------
+// Prevent closing the menu when clicking inside the navbar
+// -----------------------------
+navbar.addEventListener("click", function(event) {
+  event.stopPropagation(); // Prevent the click from propagating to the document
 });
 
 // -----------------------------
@@ -76,7 +85,16 @@ document.querySelectorAll("#navbar a").forEach(link => {
     const targetSection = document.getElementById(targetId);
 
     if (targetSection) {
-      targetSection.scrollIntoView({ behavior: "smooth" });
+      // Smooth scroll to the target section
+      targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      // Adjust scroll position if there's a fixed header (mobile specific)
+      if (window.innerWidth <= 480) {
+        setTimeout(() => {
+          // Adjust by the height of your fixed header (e.g., 60px)
+          window.scrollBy(0, -document.querySelector('header').offsetHeight);
+        }, 300); // Ensure the delay allows the scroll to finish first
+      }
     }
 
     // Close navbar after clicking a link
@@ -93,6 +111,16 @@ if (window.innerWidth <= 480) {
     detail.style.display = 'block';
   });
 }
+
+// -----------------------------
+// Ensure better touch responsiveness on mobile
+// -----------------------------
+hamburger.addEventListener("touchstart", function(event) {
+  event.stopPropagation();
+  event.preventDefault(); // Prevent accidental double-taps
+  hamburger.classList.toggle("active");
+  navbar.classList.toggle("active");
+});
 
 // Trigger a resize event on window load to force recalculation of layout
 window.addEventListener('load', function () {

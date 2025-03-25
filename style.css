@@ -438,6 +438,9 @@ h2::after {
 }
 
 
+
+
+
 /* ----------------------------------- */
 /* Responsive Design for Mobile (≤ 480px) */
 /* ----------------------------------- */
@@ -461,12 +464,14 @@ header {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  
 }
 
 html, body {
   height: 100%;
   overflow-y: auto;
 }
+
 
 
 nav {
@@ -575,9 +580,10 @@ nav a:active {
 
 h2 {
   font-size: 20px; /* Sets the font size for the heading */
-  padding: 10px 0; /* Adds vertical padding to the heading */
+  padding: 50px 0; /* Adds vertical padding to the heading */
   text-align: center; /* Centers the heading text */
   width: 100%; /* Ensures the heading takes up the full width of the container */
+  color:rgb(250, 247, 247);
 }
 
 h2::after {
@@ -598,11 +604,23 @@ h2::after {
   box-shadow: 0px 4px 10px rgba(247, 0, 0, 0.3); /* Adds a shadow around the paragraph */
   max-width: 800px; /* Limits the width of the paragraph */
   margin: auto; /* Centers the paragraph on the page */
+  margin-bottom: 100px;
 }
 
 /* ----------------------------------- */
 /* Experience Styles*/
 /* ----------------------------------- */
+
+
+#experience h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 30px;
+  padding-top: 10%;
+}
+
   .experience-container {
     flex-direction: column; /* Stack the items vertically */
     gap: 15px; /* Reduce gap slightly */
@@ -718,7 +736,7 @@ h2::after {
 #contact h2 {
   margin-top: 80px; /* Adds space above the heading */
   font-size: 20px; /* Sets the font size for the heading */
-}
+  
 
 .contact-container {
   flex-direction: row; /* Arranges items in a horizontal row */
@@ -734,8 +752,8 @@ h2::after {
 }
 
 .contact-icon {
-  width: 25px; /* Sets the width of the contact icon */
-  height: 25px; /* Sets the height of the contact icon */
+  width: 15px; /* Sets the width of the contact icon */
+  height: 15px; /* Sets the height of the contact icon */
 }
 
 }
