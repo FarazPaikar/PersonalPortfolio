@@ -741,7 +741,7 @@ h2::after {
 #contact h2 {
   margin-bottom: 10px; /* Reduced margin below the heading to bring it closer to the icons */
   font-size: 20px; /* Sets the font size for the heading */
-  margin-top: 250px;
+  margin-top: 450px;
 }
 
 .contact-container {
