@@ -580,7 +580,6 @@ nav a:active {
 
 h2 {
   font-size: 20px; /* Sets the font size for the heading */
-  padding: 50px 0; /* Adds vertical padding to the heading */
   text-align: center; /* Centers the heading text */
   width: 100%; /* Ensures the heading takes up the full width of the container */
   color:rgb(250, 247, 247);
@@ -605,6 +604,11 @@ h2::after {
   max-width: 800px; /* Limits the width of the paragraph */
   margin: auto; /* Centers the paragraph on the page */
   margin-bottom: 100px;
+  padding-top: 20%;
+}
+
+#about h2{
+  padding: 70px 0;
 }
 
 /* ----------------------------------- */
@@ -618,13 +622,13 @@ h2::after {
   font-weight: 700;
   color: white;
   margin-bottom: 30px;
-  padding-top: 10%;
+  padding-top: 20%;
 }
 
   .experience-container {
     flex-direction: column; /* Stack the items vertically */
     gap: 15px; /* Reduce gap slightly */
-    margin-bottom: 180px;
+    margin-bottom: 100px;
   }
 
   .experience-item {
@@ -729,14 +733,16 @@ h2::after {
 /* ----------------------------------- */
 /* Contact Section */
 /* ----------------------------------- */
+
 #contact {
-  padding: 30px 10px; /* Adds padding to the top, bottom, and sides of the contact section */
+  padding: 10px 10px; /* Keeps minimal padding around the contact section */
 }
 
 #contact h2 {
-  margin-top: 80px; /* Adds space above the heading */
+  margin-bottom: 10px; /* Reduced margin below the heading to bring it closer to the icons */
   font-size: 20px; /* Sets the font size for the heading */
-  
+  margin-top: 50px;
+}
 
 .contact-container {
   flex-direction: row; /* Arranges items in a horizontal row */
@@ -748,13 +754,15 @@ h2::after {
   width: 50px; /* Sets the width of each contact item */
   height: 50px; /* Sets the height of each contact item */
   padding: 4px; /* Adds padding inside each contact item */
-  margin-bottom: 12px; /* Adds space below each contact item */
+  margin-bottom: 32px; /* Adds space below each contact item */
 }
 
 .contact-icon {
-  width: 15px; /* Sets the width of the contact icon */
-  height: 15px; /* Sets the height of the contact icon */
+  width: 25px; /* Sets the width of the contact icon */
+  height: 25px; /* Sets the height of the contact icon */
 }
+
+
 
 }
 
