@@ -2,34 +2,32 @@
 // Function to toggle the visibility of experience details with fade effect (desktop only)
 // -----------------------------
 function toggleExperience(experienceId) {
-  const experienceDetails = document.getElementById(experienceId);  // Get the experience details element by its ID
-
-  // Check if the details are already active (currently visible)
-  if (experienceDetails.style.display === 'block') {  // If the element is already visible
-    experienceDetails.style.opacity = 0;  // Set opacity to 0 to make it fade out
-    setTimeout(() => {  // Wait for the fade-out duration
-      experienceDetails.style.display = 'none';  // After the fade-out, hide the element
-    }, 300);  // Match the duration of the CSS fade-out transition (300ms)
-  } else {  // If the details are not visible
-    experienceDetails.style.display = 'block';  // Make sure the element is shown (display: block)
-    setTimeout(() => {  // Small delay to ensure opacity transition happens after element becomes visible
-      experienceDetails.style.opacity = 1;  // Set opacity to 1 to make it fade in
-    }, 10);  // Add slight delay before opacity change
+  const experienceDetails = document.getElementById(experienceId);
+  
+  if (experienceDetails.style.display === 'block') {
+    experienceDetails.style.opacity = 0;
+    setTimeout(() => {
+      experienceDetails.style.display = 'none';
+    }, 300);
+  } else {
+    experienceDetails.style.display = 'block';
+    setTimeout(() => {
+      experienceDetails.style.opacity = 1;
+    }, 10);
   }
 }
 
 // -----------------------------
 // Add event listener to all experience items for toggling details (desktop only)
 // -----------------------------
-if (window.innerWidth > 480) {  // Check if the screen width is above 480px (desktop)
-  document.querySelectorAll('.experience-item').forEach(item => {  // Select all elements with class 'experience-item'
-    item.addEventListener('click', function() {  // Add click event listener to each item
-      this.classList.toggle('active');  // Toggle 'active' class to show/hide details for this specific item
+if (window.innerWidth > 480) {
+  document.querySelectorAll('.experience-item').forEach(item => {
+    item.addEventListener('click', function() {
+      this.classList.toggle('active');
       
-      // Close other items (this keeps only one item expanded at a time)
-      document.querySelectorAll('.experience-item').forEach(otherItem => {  // Loop through all experience items
-        if (otherItem !== this) {  // Ensure other items are closed when the current item is clicked
-          otherItem.classList.remove('active');  // Remove 'active' class from other items
+      document.querySelectorAll('.experience-item').forEach(otherItem => {
+        if (otherItem !== this) {
+          otherItem.classList.remove('active');
         }
       });
     });
@@ -39,8 +37,8 @@ if (window.innerWidth > 480) {  // Check if the screen width is above 480px (des
 // -----------------------------
 // Scroll to Home section when name is clicked
 // -----------------------------
-document.getElementById("name-click").addEventListener("click", function () {  // Add click event listener to the element with ID 'name-click'
-  document.getElementById("Home").scrollIntoView({ behavior: "smooth" });  // Scroll to the element with ID 'Home' smoothly
+document.getElementById("name-click").addEventListener("click", function () {
+  document.getElementById("Home").scrollIntoView({ behavior: "smooth" });
 });
 
 // -----------------------------
@@ -53,22 +51,50 @@ const navbar = document.getElementById("navbar");
 // Toggle the active class on the hamburger button and navbar when clicked
 // -----------------------------
 hamburger.addEventListener("click", function() {
-  // Toggle the 'active' class on the hamburger button and navbar
   hamburger.classList.toggle("active");
   navbar.classList.toggle("active");
 });
 
 // -----------------------------
-// For mobile (below 480px), we don't need any JS for toggling experience details
-// Ensure all experience descriptions are visible without interaction
+// Close navbar when clicking outside of it
+// -----------------------------
+document.addEventListener("click", function(event) {
+  if (!navbar.contains(event.target) && !hamburger.contains(event.target)) {
+    navbar.classList.remove("active");
+    hamburger.classList.remove("active");
+  }
+});
+
+// -----------------------------
+// Smooth scrolling for navbar links & close menu after clicking a link
+// -----------------------------
+document.querySelectorAll("#navbar a").forEach(link => {
+  link.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+
+    const targetId = this.getAttribute("href").substring(1); // Get section ID
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Close navbar after clicking a link
+    navbar.classList.remove("active");
+    hamburger.classList.remove("active");
+  });
+});
+
+// -----------------------------
+// For mobile (below 480px), ensure all experience descriptions are visible
 // -----------------------------
 if (window.innerWidth <= 480) {
   document.querySelectorAll('.experience-details').forEach(detail => {
-    detail.style.display = 'block';  // Always show the description on mobile
+    detail.style.display = 'block';
   });
 }
 
-// Trigger a resize event on window load to force the recalculation of the layout
+// Trigger a resize event on window load to force recalculation of layout
 window.addEventListener('load', function () {
   window.dispatchEvent(new Event('resize'));
 });
