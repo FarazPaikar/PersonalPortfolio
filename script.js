@@ -1,5 +1,5 @@
 // -----------------------------
-// Function to toggle the visibility of experience details with fade effect (desktop only)
+// Function to toggle the visibility of experience details with fade effect (works on all devices)
 // -----------------------------
 function toggleExperience(experienceId) {
   const experienceDetails = document.getElementById(experienceId);
@@ -18,21 +18,19 @@ function toggleExperience(experienceId) {
 }
 
 // -----------------------------
-// Add event listener to all experience items for toggling details (desktop only)
+// Add event listener to all experience items for toggling details (works on all devices)
 // -----------------------------
-if (window.innerWidth > 480) {
-  document.querySelectorAll('.experience-item').forEach(item => {
-    item.addEventListener('click', function() {
-      this.classList.toggle('active');
-      
-      document.querySelectorAll('.experience-item').forEach(otherItem => {
-        if (otherItem !== this) {
-          otherItem.classList.remove('active');
-        }
-      });
+document.querySelectorAll('.experience-item').forEach(item => {
+  item.addEventListener('click', function() {
+    this.classList.toggle('active');
+    
+    document.querySelectorAll('.experience-item').forEach(otherItem => {
+      if (otherItem !== this) {
+        otherItem.classList.remove('active');
+      }
     });
   });
-}
+});
 
 // -----------------------------
 // Scroll to Home section when name is clicked
@@ -60,7 +58,6 @@ hamburger.addEventListener("click", function(event) {
 // Close navbar when clicking outside of it
 // -----------------------------
 document.addEventListener("click", function(event) {
-  // Close the menu if clicked outside both the hamburger and navbar
   if (!navbar.contains(event.target) && !hamburger.contains(event.target)) {
     navbar.classList.remove("active");
     hamburger.classList.remove("active");
@@ -85,22 +82,29 @@ document.querySelectorAll("#navbar a").forEach(link => {
     const targetSection = document.getElementById(targetId);
 
     if (targetSection) {
-      // Smooth scroll to the target section
       targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
 
-      // Adjust scroll position if there's a fixed header (mobile specific)
+      // Adjust scroll position for fixed header on mobile
       if (window.innerWidth <= 480) {
         setTimeout(() => {
-          // Adjust by the height of your fixed header (e.g., 60px)
           window.scrollBy(0, -document.querySelector('header').offsetHeight);
-        }, 300); // Ensure the delay allows the scroll to finish first
+        }, 300);
       }
     }
 
-    // Close navbar after clicking a link
     navbar.classList.remove("active");
     hamburger.classList.remove("active");
   });
+});
+
+// -----------------------------
+// Ensure better touch responsiveness on mobile
+// -----------------------------
+hamburger.addEventListener("touchstart", function(event) {
+  event.stopPropagation();
+  event.preventDefault(); // Prevent accidental double-taps
+  hamburger.classList.toggle("active");
+  navbar.classList.toggle("active");
 });
 
 // -----------------------------
@@ -113,16 +117,8 @@ if (window.innerWidth <= 480) {
 }
 
 // -----------------------------
-// Ensure better touch responsiveness on mobile
-// -----------------------------
-hamburger.addEventListener("touchstart", function(event) {
-  event.stopPropagation();
-  event.preventDefault(); // Prevent accidental double-taps
-  hamburger.classList.toggle("active");
-  navbar.classList.toggle("active");
-});
-
 // Trigger a resize event on window load to force recalculation of layout
+// -----------------------------
 window.addEventListener('load', function () {
   window.dispatchEvent(new Event('resize'));
 });
@@ -136,18 +132,31 @@ document.getElementById("contact-button").addEventListener("click", function(eve
   const targetSection = document.getElementById("contact");
 
   if (targetSection) {
-    // Smooth scroll to the target section
     targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
 
-    // Adjust scroll position if there's a fixed header (especially mobile specific)
     setTimeout(() => {
-      // Check the header height dynamically
       const headerHeight = document.querySelector('header') ? document.querySelector('header').offsetHeight : 0;
       if (window.innerWidth <= 480) {
         window.scrollBy(0, -headerHeight); // Adjust by header height to ensure it's not covered
       }
-    }, 300); // Give it a moment for the smooth scroll to complete
+    }, 300);
   }
 });
 
-
+// -----------------------------
+// Add event listener to handle window resize for responsive adjustments
+// -----------------------------
+window.addEventListener('resize', function() {
+  const isMobile = window.innerWidth <= 480;
+  
+  // Adjust experience details for mobile
+  if (isMobile) {
+    document.querySelectorAll('.experience-details').forEach(detail => {
+      detail.style.display = 'block';
+    });
+  } else {
+    document.querySelectorAll('.experience-details').forEach(detail => {
+      detail.style.display = 'none'; // Set your default display for non-mobile views
+    });
+  }
+});
