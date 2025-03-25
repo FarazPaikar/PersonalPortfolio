@@ -126,3 +126,26 @@ hamburger.addEventListener("touchstart", function(event) {
 window.addEventListener('load', function () {
   window.dispatchEvent(new Event('resize'));
 });
+
+// -----------------------------
+// Scroll to Contact section when contact button is clicked
+// -----------------------------
+document.getElementById("contact-button").addEventListener("click", function(event) {
+  event.preventDefault(); // Prevent default anchor behavior
+
+  const targetSection = document.getElementById("contact");
+
+  if (targetSection) {
+    // Smooth scroll to the target section
+    targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    // Adjust scroll position if there's a fixed header (mobile specific)
+    if (window.innerWidth <= 480) {
+      setTimeout(() => {
+        // Adjust by the height of your fixed header (e.g., 60px)
+        window.scrollBy(0, -document.querySelector('header').offsetHeight);
+      }, 300); // Ensure the delay allows the scroll to finish first
+    }
+  }
+});
+
