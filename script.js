@@ -139,13 +139,15 @@ document.getElementById("contact-button").addEventListener("click", function(eve
     // Smooth scroll to the target section
     targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
 
-    // Adjust scroll position if there's a fixed header (mobile specific)
-    if (window.innerWidth <= 480) {
-      setTimeout(() => {
-        // Adjust by the height of your fixed header (e.g., 60px)
-        window.scrollBy(0, -document.querySelector('header').offsetHeight);
-      }, 300); // Ensure the delay allows the scroll to finish first
-    }
+    // Adjust scroll position if there's a fixed header (especially mobile specific)
+    setTimeout(() => {
+      // Check the header height dynamically
+      const headerHeight = document.querySelector('header') ? document.querySelector('header').offsetHeight : 0;
+      if (window.innerWidth <= 480) {
+        window.scrollBy(0, -headerHeight); // Adjust by header height to ensure it's not covered
+      }
+    }, 300); // Give it a moment for the smooth scroll to complete
   }
 });
+
 
