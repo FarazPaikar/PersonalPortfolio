@@ -395,29 +395,31 @@ h2::after {
 }
 
 
-
-
-
-
-/* Hover effect for contact item */
-.contact-item:hover {
-  transform: translateY(-10px); /* Lift the item on hover */
-  box-shadow: 0 12px 30px rgba(233, 3, 3, 0.5); /* Stronger red shadow on hover */
-  cursor: pointer; /* Change cursor to pointer */
+/* .contact-container - Container for contact items */
+.contact-container {
+  display: flex; /* Flex layout */
+  justify-content: space-evenly; /* Distribute items evenly */
+  gap: 40px; /* Increase space between items */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* .contact-icon - Icon styling */
-.contact-icon {
-  width: 40px; /* Set width for consistency */
-  height: 40px; /* Set height for consistency */
-  filter: invert(1); /* Invert the icon color to white */
+/* .contact-item - Individual contact item */
+.contact-item {
+  background-color: #1a1818; /* Grey circle background */
+  border-radius: 50%; /* Circular items */
+  padding: 5px; /* Add padding inside each item */
+  width: 80px; /* Fixed width for consistency */
+  height: 80px; /* Fixed height for consistency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(233, 3, 3, 0.2); /* Red shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  margin-bottom: 20px; /* Space between items */
 }
 
-/* Specific styles for individual icons (optional) */
-.contact-item a {
-  display: block; /* Ensure anchor tag is a block element for center alignment */
-  text-decoration: none; /* Remove underline */
-}
 
 
 
