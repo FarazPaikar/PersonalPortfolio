@@ -375,28 +375,6 @@ h2::after {
 
 
 
-/* Hover effect for contact item */
-.contact-item:hover {
-  transform: translateY(-10px); /* Lift the item on hover */
-  box-shadow: 0 12px 30px rgba(233, 3, 3, 0.5); /* Stronger red shadow on hover */
-  cursor: pointer; /* Change cursor to pointer */
-}
-
-/* .contact-icon - Icon styling */
-.contact-icon {
-  width: 40px; /* Set width for consistency */
-  height: 40px; /* Set height for consistency */
-  filter: invert(1); /* Invert the icon color to white */
-}
-
-/* Specific styles for individual icons (optional) */
-.contact-item a {
-  display: block; /* Ensure anchor tag is a block element for center alignment */
-  text-decoration: none; /* Remove underline */
-}
-
-
-
 
 
 /* ----------------------------------- */
