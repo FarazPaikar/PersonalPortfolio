@@ -123,25 +123,26 @@ window.addEventListener('load', function () {
   window.dispatchEvent(new Event('resize'));
 });
 
-// -----------------------------
-// Scroll to Contact section when contact button is clicked
-// -----------------------------
 document.getElementById("contact-button").addEventListener("click", function(event) {
   event.preventDefault(); // Prevent default anchor behavior
 
-  const targetSection = document.getElementById("contact");
+  if (window.innerWidth <= 480) {
+    // Scroll to the bottom of the page
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  } else {
+    // Default behavior for non-mobile screens
+    const targetSection = document.getElementById("contact");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
 
-  if (targetSection) {
-    targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
-
-    setTimeout(() => {
-      const headerHeight = document.querySelector('header') ? document.querySelector('header').offsetHeight : 0;
-      if (window.innerWidth <= 480) {
-        window.scrollBy(0, -headerHeight); // Adjust by header height to ensure it's not covered
-      }
-    }, 300);
+      setTimeout(() => {
+        const headerHeight = document.querySelector("header") ? document.querySelector("header").offsetHeight : 0;
+        window.scrollBy(0, -headerHeight); // Adjust scroll position if a fixed header exists
+      }, 300);
+    }
   }
 });
+
 
 // -----------------------------
 // Add event listener to handle window resize for responsive adjustments
