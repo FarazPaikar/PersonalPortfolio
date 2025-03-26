@@ -739,9 +739,9 @@ h2::after {
 }
 
 #contact h2 {
-  margin-bottom: 10px; /* Reduced margin below the heading to bring it closer to the icons */
+  margin-bottom: 1009px; /* Reduced margin below the heading to bring it closer to the icons */
   font-size: 20px; /* Sets the font size for the heading */
-  margin-top: 150px;
+  margin-top: 1500px;
 }
 
 .contact-container {
@@ -754,7 +754,7 @@ h2::after {
   width: 50px; /* Sets the width of each contact item */
   height: 50px; /* Sets the height of each contact item */
   padding: 4px; /* Adds padding inside each contact item */
-  margin-bottom: 32px; /* Adds space below each contact item */
+  margin-bottom: 3002px; /* Adds space below each contact item */
 }
 
 .contact-icon {
