@@ -382,6 +382,8 @@ h2::after {
   padding: 60px 20px; /* Add padding around the section */
   text-align: center; /* Center the content */
   font-family: 'Arial', sans-serif; /* Use a clean font */
+  margin-top: 390px;
+  
 }
 
 /* Heading styling */
@@ -389,7 +391,7 @@ h2::after {
 
   color: #fffbfb; /* Dark gray color */
   margin-bottom: 40px; /* Space below heading */
-  margin-top: 200px;
+ 
 }
 
 /* .contact-container - Container for contact items */
@@ -729,39 +731,12 @@ h2::after {
 }
 
 
-
-/* ----------------------------------- */
-/* Contact Section */
-/* ----------------------------------- */
-
 #contact {
-  padding: 10px 10px; /* Keeps minimal padding around the contact section */
-  scroll-margin-top: 80px; /* Ensures the section is not hidden under the navbar */
-}
-
-#contact h2 {
-  margin-bottom: 1011px; /* Reduced margin below the heading to bring it closer to the icons */
-  font-size: 20px; /* Sets the font size for the heading */
-  margin-top: 1111px; /* Adjusted to avoid excessive top margin */
-}
-
-.contact-container {
-  display: flex;
-  flex-direction: row; /* Arranges items in a horizontal row */
-  flex-wrap: wrap; /* Allows items to wrap to the next line if there isn't enough space */
-  justify-content: center; /* Centers the items horizontally within the container */
-}
-
-.contact-item {
-  width: 50px; /* Sets the width of each contact item */
-  height: 50px; /* Sets the height of each contact item */
-  padding: 4px; /* Adds padding inside each contact item */
-  margin-bottom: 1132px; /* Adds space below each contact item */
-}
-
-.contact-icon {
-  width: 25px; /* Sets the width of the contact icon */
-  height: 25px; /* Sets the height of the contact icon */
+  padding: 60px 20px; /* Add padding around the section */
+  text-align: center; /* Center the content */
+  font-family: 'Arial', sans-serif; /* Use a clean font */
+  margin-top: 39px;
+  
 }
 
 

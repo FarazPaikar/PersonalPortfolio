@@ -123,25 +123,6 @@ window.addEventListener('load', function () {
   window.dispatchEvent(new Event('resize'));
 });
 
-document.getElementById("contact-button").addEventListener("click", function(event) {
-  event.preventDefault(); // Prevent default anchor behavior
-
-  if (window.innerWidth <= 480) {
-    // Scroll to the bottom of the page
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-  } else {
-    // Default behavior for non-mobile screens
-    const targetSection = document.getElementById("contact");
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
-
-      setTimeout(() => {
-        const headerHeight = document.querySelector("header") ? document.querySelector("header").offsetHeight : 0;
-        window.scrollBy(0, -headerHeight); // Adjust scroll position if a fixed header exists
-      }, 300);
-    }
-  }
-});
 
 
 // -----------------------------
