@@ -4,8 +4,10 @@
 
 /* Targets the entire HTML document */
 html {
-  scroll-behavior: smooth; /* Enables smooth scrolling between anchor links */
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjust this value to match your navbar height */
 }
+
 
 /* Styles applied to the body element (the main content area of the page) */
 body {
@@ -16,13 +18,18 @@ body {
   color: #df1313; /* Sets the text color to a medium grey */
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+
 
 /* ----------------------------------- */
 /* Header & Navigation Styles */
 /* ----------------------------------- */
 
 header {
-  background-color: #000000;
+  background-color: #141313;
   padding: 10px 30px;
   position: fixed;
   width: 100%;
@@ -481,7 +488,6 @@ header {
 html, body {
   height: 100%;
   overflow-y: auto;
-  scroll-behavior: smooth;
 }
 
 

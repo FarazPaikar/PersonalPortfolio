@@ -134,30 +134,6 @@ window.addEventListener('resize', function() {
   }
 });
 
-document.querySelectorAll("#navbar a").forEach(link => {
-  link.addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent default anchor behavior
-
-    const targetId = this.getAttribute("href").substring(1); // Get section ID
-    const targetSection = document.getElementById(targetId);
-
-    if (targetSection) {
-      let navbarHeight = document.querySelector('header').offsetHeight; // Get navbar height
-      let elementPosition = targetSection.getBoundingClientRect().top + window.scrollY;
-      let offsetPosition = elementPosition - navbarHeight; // Adjust for fixed navbar height
-
-      // Use scrollIntoView with smooth behavior
-      targetSection.scrollIntoView({
-        behavior: "smooth", // Enables smooth scrolling
-        block: "start" // Aligns the top of the section with the viewport
-      });
-    }
-
-    // Close the dropdown menu after clicking
-    navbar.classList.remove("active");
-    hamburger.classList.remove("active");
-  });
-});
 
 
 
