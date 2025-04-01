@@ -382,7 +382,7 @@ h2::after {
   padding: 60px 20px; /* Add padding around the section */
   text-align: center; /* Center the content */
   font-family: 'Arial', sans-serif; /* Use a clean font */
-  scroll-margin-top: 100px; /* Adjust to match navbar height */
+  scroll-margin-top: 10000px; /* Adjust to match navbar height */
   }
 
 
