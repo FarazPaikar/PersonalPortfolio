@@ -645,7 +645,7 @@ h2::after {
 
   .experience-container {
     flex-direction: column; /* Stack the items vertically */
-    gap: 15px; /* Reduce gap slightly */
+    gap: 0px; /* Reduce gap slightly */
     margin-bottom: 100px;
   }
 
@@ -653,15 +653,18 @@ h2::after {
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack logo and details vertically */
     align-items: center; /* Center items horizontally */
-    width: 65%; /* Slightly reduce width of items */
+    width: 70%; /* Increase width slightly for better balance */
+    max-width: 350px; /* Add max-width to prevent stretching on larger screens */
     text-align: center; /* Ensure the text is centered */
-    cursor: default; /* Remove the cursor pointer on mobile */
+    cursor: pointer; /* Add pointer cursor for interaction */
     position: relative;
-    background-color: #131212; /* Add background color to item */
-    border-radius: 8px; /* Slightly reduce border radius */
-    box-shadow: 0px 3px 8px rgba(255, 0, 0, 0.1); /* Slightly reduce shadow */
-    margin: 0 auto; /* center the box */
-    padding:10px;
+    background-color: #1e1e1e; /* Darker background for a more modern feel */
+    border-radius: 12px; /* Rounder corners for a more soft look */
+    box-shadow: 0 4px 12px rgba(253, 6, 6, 0.2); /* Softer, wider shadow for depth */
+    margin: 20px auto; /* Center the box and add spacing between items */
+    padding: 20px; /* Increase padding for better spacing inside the box */
+    transition: all 0.3s ease-in-out; /* Smooth transition on hover */
+    overflow: hidden; /* Prevent overflow issues */
   }
 
   .experience-logo {
@@ -766,6 +769,7 @@ h2::after {
   flex-direction: row; /* Arranges items in a horizontal row */
   flex-wrap: wrap; /* Allows items to wrap to the next line if there isn't enough space */
   justify-content: center; /* Centers the items horizontally within the container */
+  gap: 30px;
 }
 
 .contact-item {
