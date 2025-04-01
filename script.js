@@ -146,12 +146,11 @@ document.querySelectorAll("#navbar a").forEach(link => {
       let elementPosition = targetSection.getBoundingClientRect().top + window.scrollY;
       let offsetPosition = elementPosition - navbarHeight; // Adjust for fixed navbar height
 
-      setTimeout(() => {
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth" // Enables smooth scrolling
-        });
-      }, 10); // Delay ensures calculation is correct
+      // Use scrollIntoView with smooth behavior
+      targetSection.scrollIntoView({
+        behavior: "smooth", // Enables smooth scrolling
+        block: "start" // Aligns the top of the section with the viewport
+      });
     }
 
     // Close the dropdown menu after clicking
@@ -159,5 +158,6 @@ document.querySelectorAll("#navbar a").forEach(link => {
     hamburger.classList.remove("active");
   });
 });
+
 
 
