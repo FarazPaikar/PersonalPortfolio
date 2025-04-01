@@ -388,7 +388,7 @@ h2::after {
 #contact h2 {
 
   color: #fffbfb; /* Dark gray color */
-  margin-bottom: 40px; /* Space below heading */
+  margin-bottom: 0px; /* Space below heading */
   margin-top: 200px;
 }
 
@@ -396,7 +396,7 @@ h2::after {
 .contact-container {
   display: flex; /* Flex layout */
   justify-content: space-evenly; /* Distribute items evenly */
-  gap: 40px; /* Increase space between items */
+  gap: 10px; /* Increase space between items */
   flex-wrap: wrap; /* Allow items to wrap on smaller screens */
   max-width: 1200px;
   margin: auto;
@@ -740,9 +740,7 @@ h2::after {
 }
 
 #contact h2 {
-  margin-bottom: 1011px; /* Reduced margin below the heading to bring it closer to the icons */
   font-size: 20px; /* Sets the font size for the heading */
-  margin-top: 1111px; /* Adjusted to avoid excessive top margin */
 }
 
 .contact-container {
@@ -756,7 +754,7 @@ h2::after {
   width: 50px; /* Sets the width of each contact item */
   height: 50px; /* Sets the height of each contact item */
   padding: 4px; /* Adds padding inside each contact item */
-  margin-bottom: 1132px; /* Adds space below each contact item */
+
 }
 
 .contact-icon {
