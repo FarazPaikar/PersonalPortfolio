@@ -82,14 +82,14 @@ document.querySelectorAll("#navbar a").forEach(link => {
     const targetSection = document.getElementById(targetId);
 
     if (targetSection) {
-      let headerOffset = document.querySelector('header').offsetHeight; // Get navbar height
-      let elementPosition = targetSection.getBoundingClientRect().top + window.scrollY;
-      let offsetPosition = elementPosition - headerOffset; 
+      targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
+      // Adjust scroll position for fixed header on mobile
+      if (window.innerWidth <= 480) {
+        setTimeout(() => {
+          window.scrollBy(0, -document.querySelector('header').offsetHeight);
+        }, 300);
+      }
     }
 
     navbar.classList.remove("active");
@@ -122,6 +122,8 @@ if (window.innerWidth <= 480) {
 window.addEventListener('load', function () {
   window.dispatchEvent(new Event('resize'));
 });
+
+
 
 // -----------------------------
 // Add event listener to handle window resize for responsive adjustments
