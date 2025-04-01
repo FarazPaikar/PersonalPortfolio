@@ -382,14 +382,16 @@ h2::after {
   padding: 60px 20px; /* Add padding around the section */
   text-align: center; /* Center the content */
   font-family: 'Arial', sans-serif; /* Use a clean font */
-}
+  scroll-margin-top: 100px; /* Adjust to match navbar height */
+  }
+
 
 /* Heading styling */
 #contact h2 {
 
   color: #fffbfb; /* Dark gray color */
   margin-bottom: 0px; /* Space below heading */
-  margin-top: 200px;
+  margin-top: 20px;
 }
 
 /* .contact-container - Container for contact items */
