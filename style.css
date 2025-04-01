@@ -16,6 +16,7 @@ body {
   color: #df1313; /* Sets the text color to a medium grey */
 }
 
+
 /* ----------------------------------- */
 /* Header & Navigation Styles */
 /* ----------------------------------- */
@@ -55,6 +56,7 @@ nav a {
   padding: 10px 15px;
   transition: 0.3s;
   font-weight: bold;
+  
 }
 
 nav a:hover {
@@ -191,6 +193,7 @@ h2::after {
 /* About Section Styles */
 /* ----------------------------------- */
 
+
 /* Styles for paragraphs inside the About section */
 #about p {
   color: rgb(219, 216, 216); /* Sets the text color to light grey */
@@ -216,14 +219,18 @@ h2::after {
 }
 
 /* Styles for the Experience heading */
+/* Adjusting the experience section heading */
 #experience h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 28px;
   font-weight: 700;
   color: white;
   margin-bottom: 30px;
-  padding-top: 10%;
+  margin-top: 10%; /* Adds padding, adjust as needed */
+  scroll-margin-top: -80px; /* Adjust this based on the height of your navbar */
 }
+
+
 
 /* Styles for the container holding the experience items */
 .experience-container {
@@ -307,7 +314,7 @@ h2::after {
 
 /* #skills .skills-container - Container for skills, arranged in a flex layout */
 #skills {
-  padding-top: 10%;
+  margin-top: 40%;
 }
 
 .skills-container {
@@ -383,6 +390,8 @@ h2::after {
   text-align: center; /* Center the content */
   font-family: 'Arial', sans-serif; /* Use a clean font */
   scroll-margin-top: 100px; /* Adjust to match navbar height */
+  margin-top: 10%; /* Increases space from the top */
+  margin-bottom: 15%;
   }
 
 
@@ -472,7 +481,6 @@ header {
 html, body {
   height: 100%;
   overflow-y: auto;
-  scroll-behavior: smooth;
 }
 
 
