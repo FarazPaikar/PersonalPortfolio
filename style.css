@@ -4,7 +4,7 @@
 
 /* Targets the entire HTML document */
 html {
-   /* Enables smooth scrolling between anchor links */
+  scroll-behavior: smooth; /* Enables smooth scrolling between anchor links */
 }
 
 /* Styles applied to the body element (the main content area of the page) */
@@ -472,6 +472,7 @@ header {
 html, body {
   height: 100%;
   overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 
