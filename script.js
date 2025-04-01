@@ -36,7 +36,7 @@ document.querySelectorAll('.experience-item').forEach(item => {
 // Scroll to Home section when name is clicked
 // -----------------------------
 document.getElementById("name-click").addEventListener("click", function () {
-  document.getElementById("Home").scrollIntoView({ behavior: "smooth" });
+  document.getElementById("Home").scrollIntoView();
 });
 
 // -----------------------------
@@ -72,7 +72,7 @@ navbar.addEventListener("click", function(event) {
 });
 
 // -----------------------------
-// Smooth scrolling for navbar links & close menu after clicking a link
+// Scroll instantly for navbar links & close menu after clicking a link
 // -----------------------------
 document.querySelectorAll("#navbar a").forEach(link => {
   link.addEventListener("click", function(event) {
@@ -82,14 +82,7 @@ document.querySelectorAll("#navbar a").forEach(link => {
     const targetSection = document.getElementById(targetId);
 
     if (targetSection) {
-      targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
-
-      // Adjust scroll position for fixed header on mobile
-      if (window.innerWidth <= 480) {
-        setTimeout(() => {
-          window.scrollBy(0, -document.querySelector('header').offsetHeight);
-        }, 300);
-      }
+      targetSection.scrollIntoView();
     }
 
     navbar.classList.remove("active");
@@ -122,8 +115,6 @@ if (window.innerWidth <= 480) {
 window.addEventListener('load', function () {
   window.dispatchEvent(new Event('resize'));
 });
-
-
 
 // -----------------------------
 // Add event listener to handle window resize for responsive adjustments
