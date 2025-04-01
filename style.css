@@ -608,11 +608,11 @@ h2::after {
   font-family: 'Arial', serif; /* Sets the font to Arial, with a fallback to serif */
   font-size: 20px; /* Sets the font size */
   background-color: #000; /* Sets the background color to black */
-  padding: 50px; /* Adds padding inside the paragraph */
+  padding: 30px; /* Adds padding inside the paragraph */
   border-radius: 55px; /* Rounds the corners of the paragraph */
   text-align: center; /* Justifies the text */
   box-shadow: 0px 4px 20px rgba(247, 0, 0, 0.5); /* Adds a shadow around the paragraph */
-  max-width: 800px; /* Limits the width of the paragraph */
+  max-width: 300px; /* Limits the width of the paragraph */
   margin: auto; /* Centers the paragraph on the page */
   margin-bottom: 100px;
   padding-top: 20%;
